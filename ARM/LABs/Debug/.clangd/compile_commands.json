@@ -1,0 +1,17 @@
+[
+   {
+      "directory" : "C:/Git/Projetos/ARM/LABs/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/LABs\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Git/Projetos/ARM/LABs/TRABALHO_FINAL.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/LABs/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/LABs\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Git/Projetos/ARM/LABs/UART.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/LABs/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/LABs\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Git/Projetos/ARM/LABs/tm4c123gh6pm_startup_ccs.c"
+   }
+]

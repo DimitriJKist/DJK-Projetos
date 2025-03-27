@@ -1,0 +1,297 @@
+[
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/adc.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/aes.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/can.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/cmdline.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/comp.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/cpu.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/cpu_usage.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/crc.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/des.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/eeprom.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/eeprom_pb.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/emac.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/epi.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/epi_workaround_ccs.s"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/flash.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/flash_pb.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/fpu.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/fswrapper.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/gpio.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/hibernate.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/i2c.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/interrupt.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/isqrt.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/lcd.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/locator.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/lwiplib.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/mpu.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/onewire.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/ptpdlib.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/pwm.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/qei.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/random.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/ringbuf.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/scheduler.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/shamd5.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/sine.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/slave_receive_int.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/smbus.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/softi2c.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/softssi.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/softuart.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/speexlib.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/spi_flash.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/ssi.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/startup_ccs.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/sw_crc.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/swupdate.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/sysctl.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/sysexc.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/systick.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/tftp.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/timer.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/uart.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/uartstdio.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/udma.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/usb.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/ustdlib.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/watchdog.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/uart_echo/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/uart_echo\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Git/Projetos/ARM/uart_echo/wavfile.c"
+   }
+]

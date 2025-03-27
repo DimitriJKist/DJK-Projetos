@@ -1,0 +1,11 @@
+{
+  "folders": [
+    {
+      "path": "ARM"
+    }
+  ],
+  "settings": {
+    "files.autoSave": "afterDelay",
+    "CCS.debug.serial.baud": 115200
+  }
+}

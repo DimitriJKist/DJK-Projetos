@@ -1,0 +1,12 @@
+[
+   {
+      "directory" : "C:/Git/Projetos/ARM/CONTROLE MOTOR CC/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/CONTROLE MOTOR CC\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Git/Projetos/ARM/CONTROLE MOTOR CC/Malha_Aberta.c"
+   },
+   {
+      "directory" : "C:/Git/Projetos/ARM/CONTROLE MOTOR CC/Debug",
+      "command"   : "clang++ -I\"C:/Git/Projetos/ARM/CONTROLE MOTOR CC\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Git/Projetos/ARM/CONTROLE MOTOR CC/tm4c123gh6pm_startup_ccs.c"
+   }
+]
