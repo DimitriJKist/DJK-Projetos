@@ -1,0 +1,4 @@
+"./CONTROLE_CC_MOSTRA.obj"
+"./tm4c123gh6pm_startup_ccs.obj"
+"../tm4c123gh6pm.cmd"
+-llibc.a

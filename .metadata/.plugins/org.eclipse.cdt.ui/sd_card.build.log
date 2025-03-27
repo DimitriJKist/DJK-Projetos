@@ -1,0 +1,8 @@
+
+**** Build of configuration Debug for project sd_card ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 16 all -O 
+ 
+gmake[1]: 'sd_card.out' is up to date.
+
+**** Build Finished ****

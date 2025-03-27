@@ -1,0 +1,384 @@
+#include <stdint.h>
+#include <stdlib.h>
+#include "tm4c123gh6pm.h"
+
+///////////////////////////////////
+//-------------------------------//
+//  PINO |        FUNÇÃO         //
+//-------------------------------//
+//  PC5  |      QEI 1 BCO        //
+//  PC6  |      QEI 1 VRD        //
+//-------------------------------//
+//  PB0  |    TIMER CAP MODE     //
+//-------------------------------//
+//  PD0  |         PWM           //
+//-------------------------------//
+//  PC7  |   CONTROLE ON/OFF     //
+//-------------------------------//
+//  PB1  |   OUTPUT DIGITAL 1    //
+//  PB4  |   OUTPUT DIGITAL 2    //
+//  PB5  |   OUTPUT DIGITAL 3    //
+//  PB6  |   OUTPUT DIGITAL 4    //
+//  PB7  |   OUTPUT DIGITAL 5    //
+//-------------------------------//
+//  PE0  | BARRMNT COM ESP BIT1  //
+//  PE1  | BARRMNT COM ESP BIT2  //
+//  PE2  | BARRMNT COM ESP BIT3  //
+//  PE3  | BARRMNT COM ESP BIT4  //
+//  PE4  | BARRMNT COM ESP BIT5  //
+//  PE5  | BARRMNT COM ESP OK    //
+//-------------------------------//
+//  PF0  | BARRMNT COM ARM BIT1  //
+//  PF1  | BARRMNT COM ARM BIT2  //
+//  PF2  | BARRMNT COM ARM BIT3  //
+//  PF3  | BARRMNT COM ARM BIT4  //
+//  PF4  | BARRMNT COM ARM BIT5  //
+//  PD1  | BARRMNT COM ARM OK    //
+//-------------------------------//
+///////////////////////////////////
+//I2C2 SCL PE4
+//I2C2 SDA PE5
+
+
+int FREQ_AD=10;
+int FREQ_PWM=1000;
+
+float DUTY=50, duty=50;
+float erroV1=0, erroV1_antigo=0, REF=1.65;
+float V1=0, V2=0, Vsaida=0, Vsaida_antigo=0, Hz=0;
+int delay=0, referencia=1, alterar_referencias=0;
+int frequencia=0, var_num=1, digito=1,dado_antigo=0, comando_antigo=0;
+int velocidade=0, dado=0, comando=10;
+int i=0, numero_de_pontos_acao_controle=0, teste=0, TRANSMIT_REQUEST=0;
+int Primeira=1;
+float  Inercia_real=0;
+uint16_t acao_controle[100]; //FREQ_AD*10 (obs: não consegui deixar direto)
+char MENSAGEM;
+
+//P
+float KP=1;
+
+//PI
+float a1=1.16705;
+float b1=1.16635;
+
+//Avf
+float a2=0.72324796;
+float b2=0.72266020;
+float c2=0.99876716;
+
+
+uint8_t Tipo_de_controlador=0;
+uint8_t CONTROLE_ON=0;
+uint32_t contador=0, contador_referencia=0, Inercia=0;
+
+void Clock_Init(long SYSDIV_var);
+void PortE_Init(void);
+void PortF_Init(void);
+void Timer0A_Init(uint32_t period);
+void ADC_Init(void);
+void StartCritical(void);
+void EndCritical(void);
+void PWM1_0_Init(uint16_t period, uint16_t duty);
+void EnableInterrupts(void);
+void PORTB_INIT(void);
+void Timer2A_Init(void);
+void separaDigitos(int numero, int vetor[6]);
+void QEI_INIT(void);
+void PortD_Init(void);
+void I2C_CONFIG(void);
+
+//PE2 AD0 V1
+//PE3 AD1 V2
+//PWM PE4 (PADRAO) E PE5 (COMPLEMENTAR)
+//PF2 PULSO START
+void main(void){
+    StartCritical();
+    Clock_Init(4); //80M
+    I2C_CONFIG();
+ //   QEI_INIT();
+  //  PortD_Init();
+  //  PortF_Init();
+  //  PORTB_INIT();
+   // PWM1_0_Init(40000000/FREQ_PWM,(400000/FREQ_PWM)*(DUTY)-1);
+   // Timer0A_Init(80000000/FREQ_AD);
+  //  Timer2A_Init();
+   // ADC_Init();
+    EnableInterrupts();
+    EndCritical();
+
+    //numero_de_pontos_acao_controle=FREQ_AD*10;
+   // while((GPIO_PORTF_DATA_R & 0x01) == 0x01){}
+
+  //  while(contador < 80001){
+   //GPIO_PORTF_DATA_R = 0x0C;
+   // contador++;
+   // }
+   // contador=0;
+
+   // GPIO_PORTF_DATA_R = 0x08; // LED GREEN
+   // i=1;
+   /// PWM1_1_CTL_R  |= 0x01;           //  start PWM1_GEN1
+   // PWM1_ENABLE_R |= 0xC;
+   // TIMER0_CTL_R   = 0x01;
+
+
+
+    while(1){
+//TRANSMIT_REQUEST=
+        //MENSAGEM=I2C2_SDR_R;
+        velocidade = 100;//(QEI1_SPEED_R*(float)7.32*1);//7.45
+
+    }
+
+}
+
+void Timer0A_Handler(void){
+
+    I2C2_SCSR_R=0x01;
+
+    if(DUTY > 99.99999){DUTY=99.99999;}  //saturador
+    if(DUTY < 0){DUTY=0;}  //saturador
+
+
+    TIMER0_ICR_R = 0x01;    //Sair da interrupcao
+}
+
+void Timer2A_Handler(void){
+    frequencia=TIMER2_TAR_R;
+    TIMER2_TAV_R=0;
+    Hz=((int)80000000/(frequencia & 0xFFFF))-40;
+
+    TIMER2_ICR_R = 0x04;    //Sair da interrupcao
+}
+
+void I2C2_Handler(void) {
+    uint32_t status = I2C2_SRIS_R;
+
+    // Tratamento de dados recebidos
+    if (status & 0x01) { // Interrupção de recepção (DATA)
+        dado = I2C2_SDR_R; // Lê o dado recebido
+        // Processa o dado conforme necessário
+        I2C2_SICR_R = 0x01; // Limpa a interrupção
+    }
+
+    // Tratamento de solicitação de transmissão
+    if (status & 0x02) { // Interrupção de transmissão (TRANSMIT)
+        I2C2_SDR_R = MENSAGEM; // Prepara o dado a ser enviado
+        I2C2_SICR_R = 0x02; // Limpa a interrupção
+    }
+}
+
+
+
+void ADC_Init(void){
+    volatile unsigned long delay;
+    SYSCTL_RCGC2_R |= 0x00000010; //  activate PORTE
+
+    delay = SYSCTL_RCGC2_R;
+    delay = SYSCTL_RCGC2_R;
+    delay = SYSCTL_RCGC2_R;
+
+    SYSCTL_RCGC0_R |= 0x030000; //  activate ADC0
+
+    delay = SYSCTL_RCGCADC_R;
+    delay = SYSCTL_RCGCADC_R;
+    delay = SYSCTL_RCGCADC_R;
+
+    ADC0_PC_R = 0x07;         //  configure for 1M samples/sec
+    ADC1_PC_R = 0x07;         //  configure for 1M samples/sec
+    ADC0_SSPRI_R |= 0x3210;   //  sequencer 0 is highest, sequencer 3 is lowest
+    ADC1_SSPRI_R |= 0x3210;   //  sequencer 0 is highest, sequencer 3 is lowest
+    ADC0_ACTSS_R &= ~0x08;    //  disable sample sequencer 3
+    ADC1_ACTSS_R &= ~0x08;    //  disable sample sequencer 3
+    ADC0_SAC_R = 0x04;        //  hardware average
+    ADC1_SAC_R = 0x04;        //  hardware average
+    ADC0_EMUX_R = (ADC0_EMUX_R&0xFFFF0FFF)+0x0000; //  activate software trigger event
+    ADC1_EMUX_R = (ADC0_EMUX_R&0xFFFF0FFF)+0x0000; //  activate software trigger event
+    ADC0_SSMUX3_R = 1;        //  Sample Input Select PE2
+    ADC1_SSMUX3_R = 0;        //  Sample Input Select PE3
+    ADC0_ACTSS_R |= 0x08;     //  enable sample sequencer 3
+    ADC1_ACTSS_R |= 0x08;     //  enable sample sequencer 3
+    ADC0_SSCTL3_R = 0x06;     //  set flag and end
+    ADC1_SSCTL3_R = 0x06;     //  set flag and end
+}
+
+//void I2C_CONFIG(void){
+//    SYSCTL_RCGCI2C_R=0x04; //I2C2 ON
+//
+//    SYSCTL_RCGC2_R |= 0x00000010;      //  activate PORTE
+//    delay = SYSCTL_RCGC2_R;
+//    delay = SYSCTL_RCGC2_R;
+//    GPIO_PORTE_DIR_R = 0x00;          //  all input
+//    GPIO_PORTE_AFSEL_R = 0x30;        //  PE4 PE5 AFSEL
+//    GPIO_PORTE_DEN_R  = 0x30;        //  enable digital I/O
+//    GPIO_PORTE_AMSEL_R = 0x00;        //  disable analog functionality
+//    GPIO_PORTE_PCTL_R = 0x330000;
+//    GPIO_PORTE_ODR_R = 0x30;      // OIPEN DRAIN
+//
+//    //I2C2_MCR_R=0x20; //SLAVE ENABLE
+//    I2C2_MTPR_R=0x27; //1Mps
+//    I2C2_SOAR_R=0x35; //SLAVE ADDRESS
+//    I2C2_SACKCTL_R=0x01;
+//    I2C2_SIMR_R = 0x03; // Habilita interrupções de recepção (DATA) e transmissão (TRANSMIT)
+//    NVIC_EN1_R |= (1 << (33 - 32)); // Habilita interrupção 33 (I2C2) no NVIC
+//    NVIC_PRI8_R = (NVIC_PRI8_R & ~0xFF0000) | (0x20 << 16); // Prioridade 2
+//    //I2C2_SDR_R // 12C DATA, a ser recebida e enviada
+//}
+
+void I2C_CONFIG(void) {
+    // 1. Ativar clocks
+    SYSCTL_RCGCI2C_R |= 0x04;   // Ativar clock do I2C2
+    SYSCTL_RCGCGPIO_R |= 0x10;  // Ativar clock da PortE
+    while ((SYSCTL_PRGPIO_R & 0x10) == 0); // Esperar GPIO estar pronto
+
+    // 2. Configurar PE4 (SCL) e PE5 (SDA)
+    GPIO_PORTE_AFSEL_R |= 0x30;  // Função alternativa (I2C)
+    GPIO_PORTE_ODR_R |= 0x30;    // Open-drain (obrigatório para I2C)
+    GPIO_PORTE_PCTL_R = (GPIO_PORTE_PCTL_R & ~0xFF0000) | 0x330000; // Mapear para I2C
+    GPIO_PORTE_DEN_R |= 0x30;    // Habilitar digital
+
+    // 3. Configurar I2C como Slave
+    I2C2_MCR_R = 0x20;          // Modo Slave + Clock Stretching
+    I2C2_MTPR_R = 0x9;           // 400 kHz (Fast Mode Plus)
+    I2C2_SOAR_R = 0x35 ;    // Endereço do slave (0x35 em 7-bit)
+    I2C2_SCSR_R |= 0x01;        // Habilitar Slave
+
+    // 4. (Opcional) Habilitar interrupções
+    I2C2_SIMR_R = 0x03;         // Interrupções para DATA e TRANSMIT
+    NVIC_EN2_R |= 0b010000; // Habilitar interrupção no NVIC
+
+}
+
+
+
+void QEI_INIT(void){
+    SYSCTL_RCGC2_R    |= 0x04;
+    SYSCTL_RCGCGPIO_R |= 0x08;       // clock para port  C
+    GPIO_PORTC_PCTL_R |= 0x6600000;   // GPIO clear bit PCTL Port Control
+    GPIO_PORTC_DIR_R   = 0x00;        // ALLINPUT
+    GPIO_PORTC_AFSEL_R = 0x60;        // A PIN 5 // B PIN 6  // habilitando pinos para perifericos conforme tabela do datasheet
+    GPIO_PORTC_PUR_R   = 0x60;        // PULL-UP
+    GPIO_PORTC_DEN_R   = 0xE0;        // DIGITAL ENEABLE
+    SYSCTL_RCGCQEI_R  |= 0x02;       // ativa o modulos QEI1
+    QEI1_CTL_R         = 0x2028;
+    QEI1_MAXPOS_R      = (4*1024)-1;        // 4*600
+    QEI1_LOAD_R        = 160000-1;    // 500Hz
+    QEI1_CTL_R        |= 0x01;
+}
+
+void Timer0A_Init(uint32_t period){
+    SYSCTL_RCGCTIMER_R |= 0x01;  //  activate TIMER0
+    TIMER0_CTL_R = 0x00;         //  disable TIMER0A during setup
+    TIMER0_CFG_R = 0x00;         //  configure for 32-bit mode
+    TIMER0_TAMR_R = 0x02;        //  configure for ciclic mode, down-count settings
+    TIMER0_TAILR_R = period-1;   //  reload value
+    TIMER0_TAPR_R = 0;           //  bus clock resolution
+    TIMER0_IMR_R = 0x01;         //  mask
+    NVIC_PRI4_R = 0xA0000000;    //  priority 4
+    NVIC_EN0_R |= 1<<19;
+}
+
+void Timer2A_Init(void){
+    SYSCTL_RCGCTIMER_R |= 0x04;  //  activate TIMER2
+    TIMER2_CTL_R = 0x00;         //  disable TIMER0A during setup
+    TIMER2_CFG_R = 0x04;         //  configure for 32-bit mode
+    TIMER2_TAMR_R = 0x17;        //  capture mode
+  //  TIMER2_TAILR_R = 0x10000;      //  reload value
+    TIMER2_TAPR_R = 0;           //  bus clock resolution
+    TIMER2_IMR_R = 0x04;         //  mask
+    NVIC_PRI5_R = 0x60000000;    //  priority 3
+    NVIC_EN0_R |= 1<<23;
+    TIMER2_CTL_R |= 0x03;
+}
+
+
+void PWM1_0_Init(uint16_t period, uint16_t duty){ //PDO
+    volatile unsigned long delay;
+    SYSCTL_RCGCPWM_R |= 0x02;       //  activate PWM
+    delay = SYSCTL_RCGC2_R;
+    delay = SYSCTL_RCGC2_R;
+    SYSCTL_RCC_R &= ~0x00100000 ;   //  NOT use PWM divider
+    // (SYSCTL_RCC_R & (~0x000E0000)); //  configure for /2 divider
+    PWM1_0_CTL_R = 0x00;            //  DOWN mode
+    PWM1_0_LOAD_R = period - 1;     //  80M/PERIOD = FREQ PWM
+    PWM1_0_GENA_R = 0xC8;           //  LOW LOAD | HIGTH COMP A DOWN PE4
+    PWM1_0_CMPA_R = duty - 1;       //  COMP A
+    PWM1_0_CTL_R  |= 0x01;           //  start PWM1_GEN1
+   // PWM1_ENABLE_R |= 0x1;
+}
+
+
+void Clock_Init(long SYSDIV_var){
+    SYSCTL_RCC2_R |= 0x80000000;
+    SYSCTL_RCC2_R |= 0x00000800;
+    SYSCTL_RCC_R &= ~0x00400000;
+    SYSCTL_RCC_R &= ~0x000007C0;
+    SYSCTL_RCC_R += 0x00000540;
+    SYSCTL_RCC2_R &= ~0x00000070;
+    SYSCTL_RCC2_R += 0x00000000;
+    SYSCTL_RCC2_R &= ~0x00002000;
+    SYSCTL_RCC2_R |= 0x40000000;
+    SYSCTL_RCC2_R  = (SYSCTL_RCC2_R&~0x1FC00000)+ (SYSDIV_var<<22);
+    SYSCTL_RCC_R  |= 0x00400000;
+    while((SYSCTL_RIS_R&0x00000040)==0){};
+    SYSCTL_RCC2_R &= ~0x00000800;
+
+}
+
+ void PortF_Init(void){ volatile unsigned long delay;
+     SYSCTL_RCGC2_R |= 0x00000020;     // F clock
+     delay = SYSCTL_RCGC2_R;           // delay
+     GPIO_PORTF_LOCK_R = 0x4C4F434B;   // unlock PortF PF0
+     GPIO_PORTF_CR_R = 0x01;           // allow changes to PF0
+
+     GPIO_PORTF_AMSEL_R = 0x00;        // disable analog function
+     GPIO_PORTF_PCTL_R = 0x0000;       // GPIO clear bit PCTL Port Control
+     GPIO_PORTF_DIR_R = 0x01F;          // OUTPUT
+     GPIO_PORTF_AFSEL_R = 0x00;        // no alternate function
+     GPIO_PORTF_DEN_R = 0x1F;          // enable digital pins PF4-PF0
+  }
+
+ void PortD_Init(void){ volatile unsigned long delay;
+     SYSCTL_RCGC2_R |= 0x0000008;     // D clock
+     delay = SYSCTL_RCGC2_R;
+     delay = SYSCTL_RCGC2_R;
+     delay = SYSCTL_RCGC2_R;
+     GPIO_PORTD_AMSEL_R = 0x00;        // disable analog function
+     GPIO_PORTD_PCTL_R = 0x0005;       // PWM TO PD0
+     GPIO_PORTD_DIR_R = 0x03;          // OUTPUT PD0 PD1
+     GPIO_PORTD_AFSEL_R = 0x01;        // PD0 ALT FUNC
+     GPIO_PORTD_DEN_R = 0x03;          // enable digital pins PF4-PF0
+  }
+
+
+
+ void PORTB_INIT(void){ //PBO --> Cap mode
+   SYSCTL_RCGC2_R    |= 0x02;        // B clock
+   GPIO_PORTB_AMSEL_R = 0x00;        // disable analog function
+   GPIO_PORTB_DIR_R   = 0xF2;         // PB1 PB4 PB5 PB6 PB7 OUTPUT GPIO
+   GPIO_PORTB_AFSEL_R = 0x01;         // PB0 TIMER2A
+   GPIO_PORTB_PCTL_R  = 0x07;         // GPIO clear bit PCTL Port Control
+//   GPIO_PORTB_PUR_R   = 0x00;         // enable pullup resistors on PB0
+   GPIO_PORTB_DEN_R   = 0xF3;        // enable digital pins PB0 PB1 4 5 6 7
+//   GPIO_PORTB_IM_R    = 0x01;        // Mask PB0
+//   GPIO_PORTB_IEV_R   = 0x01;        // Rising edge PB0
+//   NVIC_PRI0_R        = 0x6000;      // Prioridade 3
+//   NVIC_EN0_R         = 0x02;        // BIT 1
+ }
+
+// void separaDigitos(int numero, int vetor[6]) {
+//
+//     for (int i = 0; i < 6; i++) {
+//         vetor[i] = 0;
+//     }
+//
+//     for (int i = 5; i >= 0; i--) {
+//         vetor[i] = numero % 10;
+//         numero /= 10;
+//         if (numero == 0) {
+//             break;
+//         }
+//     }
+// }
+

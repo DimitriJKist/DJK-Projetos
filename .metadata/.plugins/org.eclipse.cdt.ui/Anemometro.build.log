@@ -1,0 +1,43 @@
+
+**** Build of configuration Debug for project Anemometro ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 16 all -O 
+ 
+Building file: "../tm4c123gh6pm_startup_ccs.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --include_path="C:/Users/dimit/workspace_v12/Anemometro" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="tm4c123gh6pm_startup_ccs.d_raw"  "../tm4c123gh6pm_startup_ccs.c"
+Finished building: "../tm4c123gh6pm_startup_ccs.c"
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --include_path="C:/Users/dimit/workspace_v12/Anemometro" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 13: warning #48-D: incompatible redefinition of macro "GPIO_PORTF_AFSEL_R" (declared at line 710 of "C:/ti/TivaWare_C_Series-2.2.0.295/inc/tm4c123gh6pm.h")
+"../main.c", line 14: warning #48-D: incompatible redefinition of macro "GPIO_PORTC_AFSEL_R" (declared at line 233 of "C:/ti/TivaWare_C_Series-2.2.0.295/inc/tm4c123gh6pm.h")
+"../main.c", line 24: warning #48-D: incompatible redefinition of macro "SYSCTL_RCGC2_R" (declared at line 2059 of "C:/ti/TivaWare_C_Series-2.2.0.295/inc/tm4c123gh6pm.h")
+Finished building: "../main.c"
+ 
+Building target: "Anemometro.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Anemometro.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Anemometro_linkInfo.xml" --rom_model -o "Anemometro.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj"  -llibc.a 
+<Linking>
+warning #10247-D: creating output section ".text" without a SECTIONS specification
+warning #10247-D: creating output section ".data" without a SECTIONS specification
+warning #10247-D: creating output section ".cinit" without a SECTIONS specification
+warning #10247-D: creating output section ".stack" without a SECTIONS specification
+ 
+ undefined      first referenced
+  symbol            in file     
+ ---------      ----------------
+ SysCtlClockGet ./main.obj      
+ SysCtlDelay    ./main.obj      
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "Anemometro.out" not built
+ 
+>> Compilation failure
+makefile:135: recipe for target 'Anemometro.out' failed
+gmake[1]: *** [Anemometro.out] Error 1
+makefile:131: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****

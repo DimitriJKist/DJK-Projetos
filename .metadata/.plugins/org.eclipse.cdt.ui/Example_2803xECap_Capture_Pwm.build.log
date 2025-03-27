@@ -1,0 +1,7 @@
+Buildfile generation error occurred..
+This project was created for a device not currently recognized - TMS320C28XX.TMS320F28035:
+- Re-run CCS installer on your existing CCS location, ensure the Product Family for your device is selected, and proceed with installation if it wasn't.
+- See 'Help > Check for Updates' to check if support for this device is available through a CCS update.
+- Migrate the project to closest matching supported device by adjusting project properties.
+- Or contact TI for support if using experimental silicon.
+Build stopped..

@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "CODIGO_CARLOS",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "CODIGO_CARLOS",
+                "resourceId": "/CODIGO_CARLOS"
+            }
+        }
+    ]
+}

@@ -1,0 +1,889 @@
+<!--
+    Copyright (c) 2015, Texas Instruments Incorporated
+    All rights reserved.
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions
+    are met:
+
+    *   Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+    *   Neither the name of Texas Instruments Incorporated nor the names of
+    its contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+    THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+    PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+    CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+    EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+    PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+    OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+    WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+    OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+    EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-material/paper-material.html">
+<link rel="import" href="../iron-resizable-behavior/iron-resizable-behavior.html">
+<link rel="stylesheet" type="text/css" href="../font-opensans/OpenSans.css">
+<!--
+`ti-widget-svggauge`
+
+The gauge displays a value using a needle on a circular dial like an analogue-style meter.
+
+Example:
+
+    <ti-widget-svggauge  value="{{ angleValue }}"></ti-widget-svggauge>
+
+@group TI Instrument Widgets
+@element ti-widget-svggauge
+@demo demo.html
+@homepage ../ti-guicomposer-helpindex/demo.html
+-->
+<dom-module id='ti-widget-svggauge'  >
+
+    <template>
+
+        <style>
+            :host
+            {
+                display: inline-block;
+            }
+            svg {
+                overflow: visible;
+            }
+            #top {
+                width: 100%;
+                height: 100%;
+            }
+
+        </style>
+
+        <div id="top" layout vertical around-justified>
+            <div>
+
+                <svg id="gauge" width="100%" height="100%" viewBox="0 0 100 99.999997" preserveAspectRatio="xMidYMid meet"  >
+                    <defs>
+                        <clipPath
+                                clipPathUnits="userSpaceOnUse">
+                            <ellipse
+                                    ry="49.664104"
+                                    rx="50"
+                                    cy="929.63861"
+                                    cx="50.364693"
+                                    style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.59122443;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                        </clipPath>
+                    </defs>
+
+                    <g
+                            id="face_layer">
+                        <ellipse
+                                transform="matrix(0.91453727,0.40450164,-0.40897908,0.91254376,0,0)"
+                                ry="49.829575"
+                                rx="49.557762"
+                                cy="25.607735"
+                                cx="66.350441"
+                                id="circle4169"
+                                fill$="{{frameColor}}"
+                                stroke$="{{_getDarkerColor(frameColor)}}"
+                                style="fill-opacity:1;stroke-width:0.58958369;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                        <ellipse
+                                stroke$="[[_getDarkerColor(frameColor)]]"
+                                fill$="[[faceColor]]"
+                                style="fill-opacity:1;stroke-width:0.52462953;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                                id="innerFaceCircle"
+                                cx="66.350441"
+                                cy="25.607735"
+                                rx="44.098007"
+                                ry="44.339874"
+                                transform="matrix(0.91453727,0.40450164,-0.40897908,0.91254376,0,0)" />
+                    </g>
+
+                    <g  id="scale_layer">
+                       <!-- <template id="scale_repeat" is="dom-repeat"  items="{{ticks}}" as="tick" index-as="tickIndex" >
+
+                            <path
+                                    stroke$="{{tick.tickColor}}"
+                                    stroke-width$="{{tick.tickStrokeWidth}}"
+                                    style="fill:none;fill-rule:evenodd;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                                    d$="{{tick.path}}"
+                                    id$="path8674_{{tickIndex}}" />
+
+                            <text
+                                 xml:space="preserve"
+                                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                 font-size$="{{gaugeFontSizeInPx}}px"
+                                 font-family$="{{gaugeFontFamily}}"
+                                 text-anchor$="{{tick.textAnchor}}"
+                                 fill$="{{fontColor}}"
+                                 x$="{{tick.xTextStart}}"
+                                 y$="{{tick.yTextStart}}"
+                                 id$="{{_getId('text8678_',tickIndex,_resizeCtr)}}"><tspan
+                                   id$="{{_getId('tspan8680_',tickIndex,_resizeCtr)}}"
+                                   x$="{{tick.xTextStart}}"
+                                   y$="{{tick.yTextStart}}">{{tick.text}}</tspan></text>
+                        </template>  -->
+                        <path
+                                stroke$="{{tick.tickColor}}"
+                                stroke-width$="{{tick.tickStrokeWidth}}"
+                                style="display:none;fill:none;fill-rule:evenodd;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                                d=""
+                                id="tick_proto" />
+
+                        <text
+                                 xml:space="preserve"
+                                 style="display:none;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                                 font-size$="{{gaugeFontSizeInPx}}px"
+                                 font-family$="{{gaugeFontFamily}}"
+                                 text-anchor$="{{tick.textAnchor}}"
+                                 fill$="{{fontColor}}"
+                                 x="0"
+                                 y="0"
+                                 id="ticktext_proto">
+                            <tspan
+                                   id="ticktext_span"
+                                   x="0"
+                                   y="0">
+                            </tspan>
+                        </text>
+                    </g>
+                    <g id="{{_getId('text_layer',showOdometer,_resizeCtr)}}">
+
+    <!--                    <template is="dom-if" restamp="true" if="{{showOdometer}}">  -->
+
+                            <rect
+                                    fill$="{{odometerColor}}"
+                                    style$="{{_getOdometerDisplay(showOdometer)}};fill-opacity:1;stroke:none;stroke-width:0.36282465;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                                    id$="{{_getId('rect8700',showOdometer,_resizeCtr)}}"
+                                    width="29.540316"
+                                    height="8.1269636"
+                                    x="36.166019"
+                                    y="59.645985" />
+                            <text
+       xml:space="preserve"
+       font-family$="{{gaugeFontFamily}}"
+       fill$="{{odometerFontColor}}"
+	   font-size$="{{odometerFontSizeInPx}}px"
+       style$="{{_getOdometerDisplay(showOdometer)}};font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="64.65435"
+       y="65.590218" ><tspan 
+         x="64.65435"
+         y="65.590218">{{odometer}}</tspan></text>
+                 <!--       </template>  -->
+
+                        <text
+       xml:space="preserve"
+       font-family$="{{gaugeFontFamily}}"
+       fill$="{{fontColor}}"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:125%;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="51.007126"
+       y="32.940258" ><tspan 
+             x="51.007126"
+             y="32.940258"
+             font-size$="{{titleFontSizeInPx}}px"
+             font-family$="{{gaugeFontFamily}}"
+             fill$="{{fontColor}}"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;fill-opacity:1;text-align:center;writing-mode:lr-tb;text-anchor:middle"
+         >{{titleText}}</tspan></text>
+    <text 
+       y="38.269493"
+       x="50.878803"
+       font-size$="[[_computeBinding0(titleFontSizeInPx)]]"
+       font-family$="{{gaugeFontFamily}}"
+       fill$="{{fontColor}}"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan 
+         x="50.878803"
+         y="40.269493">{{units}}</tspan></text>
+
+                    </g>
+                    <g
+                            id="needle" transform="translate(49.891678, 50.206924)">
+                        <circle
+                                r="2.9661045"
+                                cy="0"
+                                cx="0"
+                                fill$="{{needleColor}}"
+                                style="fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                        <path
+                                d="m -1.190637,-2.7796 1.190637,-41.831995 1.190637,41.831995 -1.190637,2.7796 z"
+                                fill$="{{needleColor}}"
+                                style$="transform:rotate({{_needleRotation}}deg);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+                    </g>
+
+                </svg>
+
+            </div>
+
+        </div>
+    </template>
+    <script>
+
+        Polymer ({
+            is: 'ti-widget-svggauge',
+            _lastValue: 0,
+            _displayValue : "0",
+            hostAttributes: {
+            },
+            _computeBinding0: function(titleFontSizeInPx) {
+                return(titleFontSizeInPx - 1);
+            },
+
+            properties: {
+                /**
+                 * the value displayed by the gauge.
+                 *
+                 * @attribute value
+                 * @type number
+                 * @default 0
+                 */
+                value: {
+                    notify: true,
+                    type: Number,
+                    value: 0,
+                    observer: "valueChanged"
+                },
+                /**
+                 * the title text displayed on the gauge face.
+                 *
+                 * @attribute titleText
+                 * @type String
+                 * @default 0
+                 */
+                titleText: {
+                    notify: true,
+                    type: String,
+                    value: ""
+                },
+                /**
+                 * the units string displayed on the gauge face.
+                 *
+                 * @attribute units
+                 * @type String
+                 * @default 0
+                 */
+                units: {
+                    notify: true,
+                    type: String,
+                    value: ""
+                },
+                /**
+                 * the string displayed in the inset box on the gauge face.
+                 *
+                 * @attribute odometer
+                 * @type String
+                 * @default 0
+                 */
+                odometer: {
+                    notify: true,
+                    type: String,
+                    value: ""
+                },
+                /**
+                 * Controls whether the inset box on the gauge face is displayed or not
+                 *
+                 * @attribute showOdometer
+                 * @type Boolean
+                 * @default false
+                 */
+                showOdometer: {
+                    notify: true,
+                    type: Boolean,
+                    value: false,
+                    observer: "showOdometerChanged"
+                },
+                /**
+                 * the number of decimal places to display for values around the gauge face
+                 *
+                 * @attribute decimalPlaces
+                 * @type number
+                 * @default 0
+                 */
+                decimalPlaces: {
+                    notify: true,
+                    type: Number,
+                    value: 0,
+                    observer: "decimalPlacesChanged"
+                },
+                /**
+                 * the minimum value to display on the gauge.
+                 *
+                 * @attribute minValue
+                 * @type number
+                 * @default 0
+                 */
+                minValue: {
+                    notify: true,
+                    type: Number,
+                    value: 0,
+                    observer: "minValueChanged"
+                },
+                /**
+                 * the maximum value to display on the gauge.
+                 *
+                 * @attribute maxValue
+                 * @type number
+                 * @default 0
+                 */
+                maxValue: {
+                    notify: true,
+                    type: Number,
+                    value: 100,
+                    observer: "maxValueChanged"
+                },
+                /**
+                 * option controlling how major ticks are drawn (LongTick, BoldTick)
+                 *
+                 * @attribute majorTickStyle
+                 * @type String
+                 * @default "LongTick"
+                 */
+                majorTickStyle: {
+                    notify: true,
+                    type: String,
+                    value: "LongTick",
+                    observer: "majorTickStyleChanged"
+                },
+                /**
+                 * number of ticks for each value increment of 1 (can be fractional)
+                 *
+                 * @attribute numTicksPerUnit
+                 * @type Number
+                 * @default 1.0
+                 */
+                numTicksPerUnit: {
+                    notify: true,
+                    type: Number,
+                    value: 1.0,
+                    observer: "numTicksPerUnitChanged"
+                },
+                /**
+                 * number of ticks between each major tick
+                 *
+                 * @attribute numTicksPerNumberLabel
+                 * @type Number
+                 * @default 10
+                 */
+                numTicksPerNumberLabel: {
+                    notify: true,
+                    type: Number,
+                    value: 10,
+                    observer: "numTicksPerNumberLabelChanged"
+                },
+                /**
+                 * number of ticks before the first major tick
+                 *
+                 * @attribute numTicksToFirstLabel
+                 * @type Number
+                 * @default 0
+                 */
+                numTicksToFirstLabel: {
+                    notify: true,
+                    type: Number,
+                    value: 0,
+                    observer: "numTicksToFirstLabelChanged"
+                },
+                /**
+                 * Font size for text on the gauge scale labels (in svg pixels, without the px suffix)
+                 *
+                 * @attribute gaugeFontSizeInPx
+                 * @type Number
+                 * @default 4.75
+                 */
+                gaugeFontSizeInPx: {
+                    notify: true,
+                    type: Number,
+                    value: 4.75
+                },
+                /**
+                 * Font size for the title text (in svg pixels, without the px suffix)
+                 *
+                 * @attribute gaugeFontSizeInPx
+                 * @type Number
+                 * @default 6
+                 */
+                titleFontSizeInPx: {
+                    notify: true,
+                    type: Number,
+                    value: 6
+                },
+                /**
+                 * Font family to use
+                 *
+                 * @attribute gaugeFontFamily
+                 * @type String
+                 * @default "Open Sans"
+                 */
+                gaugeFontFamily: {
+                    notify: true,
+                    type: String,
+                    value: "Open Sans"
+                },
+                /**
+                 * Color for the frame surrounding the gauge face
+                 *
+                 * @attribute frameColor
+                 * @type String
+                 * @default "#c0c0c0"
+                 */
+                frameColor: {
+                    notify: true,
+                    type: String,
+                    value: "#c0c0c0"
+                },
+                /**
+                 * Color for the needleColor
+                 *
+                 * @attribute needleColor
+                 * @type String
+                 * @default "#cc0000"
+                 */
+                needleColor: {
+                    notify: true,
+                    type: String,
+                    value: "#cc0000"
+                },
+                /**
+                 * Color for text on the gauge face
+                 *
+                 * @attribute fontColor
+                 * @type String
+                 * @default "#000000"
+                 */
+                fontColor: {
+                    notify: true,
+                    type: String,
+                    value: "#000000"
+                },
+                /**
+                 * Color for the gauge face
+                 *
+                 * @attribute faceColor
+                 * @type String
+                 * @default "#ffffff"
+                 */
+                faceColor: {
+                    notify: true,
+                    type: String,
+                    value: "#ffffff"
+                },
+                /**
+                 * Color for minor tick marks in the gauge scale
+                 *
+                 * @attribute tickColor
+                 * @type String
+                 * @default "#000000"
+                 */
+                tickColor: {
+                    notify: true,
+                    type: String,
+                    value: "#000000",
+                    observer: "tickColorChanged"
+                },
+                /**
+                 * Color for major tick marks in the gauge scale
+                 *
+                 * @attribute majorTickColor
+                 * @type String
+                 * @default "#000000"
+                 */
+                majorTickColor: {
+                    notify: true,
+                    type: String,
+                    value: "#000000",
+                    observer: "majorTickColorChanged"
+                },
+                /**
+                 * Background color for the inset box on the gauge face
+                 *
+                 * @attribute odometerColor
+                 * @type String
+                 * @default "#eaeaea"
+                 */
+                odometerColor: {
+                    notify: true,
+                    type: String,
+                    value: "#eaeaea"
+                },
+                /**
+                 * Font color for the inset box on the gauge face
+                 *
+                 * @attribute odometerFontColor
+                 * @type String
+                 * @default "#000000"
+                 */
+                odometerFontColor: {
+                    notify: true,
+                    type: String,
+                    value: "#000000"
+                },
+                /**
+                 * Font size for the odometer text (in svg pixels, without the px suffix)
+                 *
+                 * @attribute odometerFontSizeInPx
+                 * @type Number
+                 * @default 5
+                 */
+                odometerFontSizeInPx: {
+                    type: Number,
+                    value: 5,
+                    notify: true
+                },
+                ticks: {
+                    type: Array
+                }
+
+            },
+
+            _needleRotation: -150,
+            _getOdometerDisplay: function(showOdometer){
+                var result = "";
+                if (!showOdometer){
+                    result = "display:none";
+                }
+                return result;
+            },
+            _getDarkerColor: function(colorHex){
+                // validate hex string
+                colorHex = String(colorHex).replace(/[^0-9a-f]/gi, '');
+                if (colorHex.length < 6) {
+                    colorHex = colorHex[0]+colorHex[0]+colorHex[1]+colorHex[1]+colorHex[2]+colorHex[2];
+                }
+                var lum = -0.03;
+
+                // convert to decimal and change luminosity
+                var rgb = "#", c, i;
+                for (i = 0; i < 3; i++) {
+                    c = parseInt(colorHex.substr(i*2,2), 16);
+                    c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+                    rgb += ("00"+c).substr(c.length);
+                }
+
+                return rgb;
+            },
+
+            showOdometerChanged: function(){
+                this.onResize();
+            },
+            _getId: function(base, qual1, qual2){
+                return base+qual1+qual2;
+            },
+            minValueChanged : function(){
+                if (!this.$) return;
+                this.autoAdjustDecimalPlaces();
+                this.genTicks();
+                this.valueChanged();
+            },
+            maxValueChanged : function(){
+                if (!this.$) return;
+                this.autoAdjustDecimalPlaces();
+                this.genTicks();
+                this.valueChanged();
+            },
+            autoAdjustDecimalPlaces: function(){
+                if (!this.$) return;
+                var range = Math.abs(this.maxValue - this.minValue);
+                if (range < 10){
+                    this.decimalPlaces = 1;
+                    var logRange = Math.log(range);
+                    if (logRange < 0){
+                        this.decimalPlaces = (-1*logRange)+2;
+                    }
+                } else {
+                    this.decimalPlaces = 0;
+                }
+            },
+            numTicksPerUnitChanged: function(){
+                if (!this.$) return;
+                this.genTicks();
+            },
+            numTicksPerNumberLabelChanged: function(){
+                this.genTicks();
+            },
+            numTicksToFirstLabelChanged: function(){
+                this.genTicks();
+                this.valueChanged();
+            },
+            majorTickStyleChanged: function(){
+                this.genTicks();
+            },
+            tickColorChanged: function() {
+                this.genTicks();
+            },
+            majorTickColorChanged: function(){
+                this.genTicks();
+            },
+            decimalPlacesChanged : function()
+            {
+                if (!this.$) return;
+                var newValue = +this.value;
+                this._displayValue = newValue.toFixed(this.decimalPlaces);
+                this.genTicks();
+            },
+            getTickVector: function (tickNumber, numTicks, majorTick, halfwayTick, value) {
+                if ((!this.$) || (value === null) || (value === undefined)) return null;
+                var result = {
+                    xStart: 0,
+                    yStart: 0,
+                    xEnd: 0,
+                    yEnd: 0,
+                    path: "",
+                    tickColor: this.tickColor,
+                    majorTick: majorTick,
+                    tickStrokeWidth: 0.2,
+                    xTextStart: 0,
+                    yTextStart: 0,
+                    textAnchor: 'start',
+                    textAlign: 'left',
+                    text: Number(value).toFixed(this.decimalPlaces)
+                };
+                var minAngle = -240;  // degrees below horizontal: 150 , with 90 more to handle rotation of 0 from horizontal to vertical
+                var yOffset = 50;
+                var xOffset = 50;
+                var startRadius = this.$.innerFaceCircle.rx.baseVal.value - 2;
+
+                var tickLength = 6;
+                if (!majorTick){
+                    if (halfwayTick) {
+                        switch (this.majorTickStyle) {
+                            case 'LongTick':
+                                tickLength = 4;
+                                result.tickStrokeWidth = 0.2;
+                                break;
+                            case 'BoldTick':
+                                tickLength = 2;
+                                result.tickStrokeWidth = 0.45;
+                                break;
+                        }
+                    } else {
+                        tickLength = 2;
+                        result.tickStrokeWidth = 0.2;
+                    }
+                    result.text = '';
+                } else {
+                    result.tickColor = this.majorTickColor;
+                    switch (this.majorTickStyle){
+                        case 'LongTick':
+                            tickLength = 6;
+                            result.tickStrokeWidth = 0.2;
+                            break;
+                        case 'BoldTick':
+                            tickLength = 2;
+                            result.tickStrokeWidth = 0.9;
+                            break;
+                    }
+                }
+                var endRadius = startRadius - tickLength;
+                var textRadius = endRadius - 4;
+                var angleRange = 300;  // 150 * 2
+                var angle = ( (angleRange/numTicks)*tickNumber + minAngle)%360;
+                angle  = (angle * Math.PI)/180.0;
+                //console.log('angle = '+angle);
+                var cosAngle = Math.cos(angle);
+                var sinAngle = Math.sin(angle);
+                result.xStart = xOffset + cosAngle*startRadius;
+                result.xEnd = xOffset + cosAngle*endRadius;
+                result.yStart = yOffset + sinAngle*startRadius;
+                result.yEnd = yOffset + sinAngle*endRadius;
+                result.xTextStart = xOffset + cosAngle*textRadius;
+                result.yTextStart = yOffset + sinAngle*textRadius + this.gaugeFontSizeInPx/2;// + ((100-result.yStart)/200 * this.gaugeFontSizeInPx);
+                //result.yTextStart +=  this.gaugeFontSizeInPx;
+                if (tickNumber > numTicks*0.7){
+                    result.textAlign = 'right';
+                    result.textAnchor = 'end';
+
+                } else if (tickNumber > numTicks*0.3){
+
+                    result.textAlign = 'center';
+                    result.textAnchor = 'middle';
+
+                }
+                result.path = "M "+result.xStart+" "+result.yStart+" L "+result.xEnd+" "+result.yEnd+" z";
+                return result;
+            },
+            valueChanged : function()
+            {
+                if (!this.$) return;
+
+                if (this.value < this.minValue){
+                    this.value = +this.minValue;
+                }
+                if (this.value > this.maxValue){
+                    this.value = +this.maxValue;
+                }
+                var angleRange = 300;
+                var startAngle = -150;
+                var percentFullScale = (this.value - this.minValue)/(this.maxValue - this.minValue);
+                this._needleRotation = (percentFullScale * angleRange ) - startAngle + 60;
+                this._displayValue = Number(this.value).toFixed(this.decimalPlaces);
+            },
+            _prevOffsetY: 0,
+            getOffsetY: function(_initialized,_resizeCtr) {
+                var result = 0;
+                if (!this.$) return result;
+
+                if ((this.$)&&(_initialized)) {
+                    var rect = this.getBoundingClientRect();//this.$.gauge.getBoundingClientRect();
+                    var rect2 = this.$.markings.getBoundingClientRect();
+                    result = -1*(rect2.top - rect.top);
+
+
+                }
+                if (result === 0){
+                    result = this._prevOffsetY;
+                } else {
+                    result = result + this._prevOffsetY;
+                    this._prevOffsetY = result;
+                }
+
+                return result+"px";
+
+            },
+
+            genTicks: function(){
+                if ((!this.$) || (!this._initialized)) return ;
+                var parentEl = this.querySelector('#scale_layer');
+
+                if (!this.ticks){
+                    this.ticks = [];
+                    this.notifyPath('ticks',this.ticks);
+                } else {
+                    for (var i=0; i < this.ticks.length; i++) {
+                        parentEl.removeChild(this.ticks[i].elTick);
+                        parentEl.removeChild(this.ticks[i].elText);
+                    }
+                    this.splice('ticks', 0, this.ticks.length);
+                }
+                var incr = 1 / this.numTicksPerUnit;
+                var numTicks = (this.maxValue - this.minValue)*this.numTicksPerUnit;
+                var value = +this.minValue;
+                var majorTick = false;
+                var halfwayTick = false;
+
+                var tick;
+
+                for (var i=0; i <= numTicks; i++){
+                    if ((i >= this.numTicksToFirstLabel) && (((i-this.numTicksToFirstLabel) % this.numTicksPerNumberLabel) == 0)){
+                        majorTick = true;
+                        halfwayTick = false;
+                    } else {
+                        majorTick = false;
+                        if ((this.numTicksPerNumberLabel % 2 === 0) && (i >= this.numTicksToFirstLabel) && (i - this.numTicksToFirstLabel) % (this.numTicksPerNumberLabel / 2) == 0) {
+                            halfwayTick = true;
+                        } else {
+                            halfwayTick = false;
+                        }
+                    }
+                    tick = this.getTickVector(i,numTicks,majorTick, halfwayTick,value);
+                    tick.elTick = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+                    tick.elTick.setAttribute("id","path8674_"+i);
+                    tick.elTick.setAttribute("d",tick.path);
+                    tick.elTick.style.fill = "none";
+                    tick.elTick.style.fillRule = "evenodd";
+                    tick.elTick.style.strokeLinecap = "butt"
+                    tick.elTick.style.strokeLinejoin = "miter";
+                    tick.elTick.style.strokeMiterlimit = 4;
+                    tick.elTick.style.strokeDasharray = "none";
+                    tick.elTick.style.strokeOpacity = 1;
+                    tick.elTick.style.stroke = tick.tickColor;
+                    tick.elTick.style.strokeWidth = tick.tickStrokeWidth;
+
+                    tick.elText =document.createElementNS("http://www.w3.org/2000/svg", 'text');
+                    var textId = this._getId('text8678_',i,this._resizeCtr);
+                    tick.elText.setAttribute("id",textId);
+                    tick.elText.setAttribute("x",tick.xTextStart);
+                    tick.elText.setAttribute("y",tick.yTextStart);
+                    tick.elText.setAttribute("textAnchor",tick.textAnchor);
+                    tick.elText.style.fontStyle = "normal";
+                    tick.elText.style.fontVariant = "normal";
+                    tick.elText.style.fontWeight="normal";
+                    tick.elText.style.fontStretch="normal";
+                    tick.elText.style.lineHeight="100%";
+                    tick.elText.style.textAlign="start";
+                    tick.elText.style.letterSpacing="0px";
+                    tick.elText.style.wordrSpacing="0px";
+                    tick.elText.style.writingMode="lr-tb";
+                    tick.elText.style.fillOpacity = 1;
+                    tick.elText.style.stroke = "none";
+                    tick.elText.style.strokeWidth = "1px";
+                    tick.elText.style.strokeLinecap = "butt";
+                    tick.elText.style.strokeLinejoin = "miter";
+                    tick.elText.style.strokeOpacity = 1;
+                    tick.elText.style.fontSize= this.gaugeFontSizeInPx + "px";
+                    tick.elText.style.fontFamily=this.gaugeFontFamily;
+                    tick.elText.style.textAnchor= tick.textAnchor;
+                    tick.elText.style.fill= this.fontColor;
+
+                    var textSpan = document.createElementNS("http://www.w3.org/2000/svg", 'tspan');
+                        textSpan.setAttribute("id",this._getId('tspan8680_', i, this._resizeCtr));
+                        textSpan.setAttribute("x",tick.xTextStart);
+                        textSpan.setAttribute("y",tick.yTextStart);
+                        textSpan.textContent = tick.text;
+                    parentEl.appendChild(tick.elTick);
+                    parentEl.appendChild(tick.elText);
+                    var textObj = this.querySelector("#"+textId);
+                    textObj.appendChild(textSpan);
+
+
+                    this.push("ticks",tick);
+                    // console.log(this.ticks[i]);
+                    value += incr;
+                }
+
+
+
+
+            },
+            ready: function() {
+                this._resizeCtr = 0;
+            },
+            attached: function () {
+
+                // this.resizableAttachedHandler();
+                this.addEventListener("transitionend",function(e){
+                    //console.log("transition handler");
+                    this.onResize();
+                });
+
+                this.async(function() {
+                    this.domReady();
+                }.bind(this),1);
+            },
+            detached:function(){
+                //this.resizableDetachedHandler();
+            },
+            _resizeCtr: 0,
+            onResize: function() {
+                this.async(function(){
+                    this._resizeCtr++;
+                    //this.updateStyles(); // ensure css style is updated
+                    Polymer.dom.flush();
+                }.bind(this),1);
+            },
+
+            listeners: {
+                'iron-resize': 'onResize'
+            },
+            _initialized: false,
+            onResizedByDesigner: function(){
+                this.async(function(){
+                    this._resizeCtr++;
+                    //this.updateStyles(); // ensure css style is updated
+                    Polymer.dom.flush();
+                }.bind(this),5);
+            },
+
+            domReady: function(){
+                this._initialized = true;
+                this.genTicks();
+                this.async(function(){
+                    this.onResize();
+                }.bind(this));
+            }
+        });
+    </script>
+</dom-module>

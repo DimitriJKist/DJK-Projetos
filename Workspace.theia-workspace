@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "path": "file:///c%3A/Users/dimit/workspace_ccstheia"
+    },
+    {
+      "path": "file:///c%3A/Users/dimit/workspace_v12"
+    },
+    {
+      "path": "file:///c%3A/Users/dimit/Downloads/Lab4_Timer_prova"
+    }
+  ],
+  "settings": {
+    "files.autoSave": "afterDelay",
+    "CCS.debug.serial.baud": 115200
+  }
+}

@@ -1,0 +1,62 @@
+[
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Debug/FlashProgram.asm"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Debug/MAIN.asm"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Debug/PLL.asm"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Debug/Scoreboard.asm"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Debug/UART.asm"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Debug/tm4c123gh6pm_startup_ccs.asm"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/FlashProgram.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/MAIN.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/PLL.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Scoreboard.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/UART.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/Controle_Digital_Trabalho_Final/tm4c123gh6pm_startup_ccs.c"
+   }
+]

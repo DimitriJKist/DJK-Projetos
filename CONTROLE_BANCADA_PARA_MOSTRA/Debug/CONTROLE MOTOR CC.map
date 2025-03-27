@@ -1,0 +1,492 @@
+******************************************************************************
+                  TI ARM Linker PC v20.2.7                     
+******************************************************************************
+>> Linked Mon Mar 25 23:46:31 2024
+
+OUTPUT FILE NAME:   <CONTROLE MOTOR CC.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 000008c5
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00040000  00000962  0003f69e  R  X
+  SRAM                  20000000   00008000  00007754  000008ac  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00000968   00000968    r-x
+  00000000    00000000    0000026c   0000026c    r-- .intvecs
+  0000026c    0000026c    000006ae   000006ae    r-x .text
+  00000920    00000920    00000048   00000048    r-- .cinit
+20000000    20000000    00007754   00000000    rw-
+  20000000    20000000    00007530   00000000    rw- .bss
+  20007530    20007530    00000200   00000000    rw- .stack
+  20007730    20007730    00000024   00000000    rw- .data
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    0000026c     
+                  00000000    0000026c     tm4c123gh6pm_startup_ccs.obj (.intvecs)
+
+.text      0    0000026c    000006ae     
+                  0000026c    00000384     Malha_Aberta.obj (.text)
+                  000005f0    00000112     tm4c123gh6pm_startup_ccs.obj (.text)
+                  00000702    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.asm.obj (.text)
+                  0000079e    0000007a                                   : memset_t2.asm.obj (.text)
+                  00000818    00000068                                   : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
+                  00000880    00000044                                   : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  000008c4    00000034                                   : boot_cortex_m.c.obj (.text:_c_int00_noargs:_c_int00_noargs)
+                  000008f8    0000000e                                   : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  00000906    0000000c                                   : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init)
+                  00000912    00000004                                   : pre_init.c.obj (.text:_system_pre_init)
+                  00000916    00000004                                   : exit.c.obj (.text:abort:abort)
+
+.cinit     0    00000920    00000048     
+                  00000920    0000001d     (.cinit..data.load) [load image, compression = lzss]
+                  0000093d    00000003     --HOLE-- [fill = 0]
+                  00000940    0000000c     (__TI_handler_table)
+                  0000094c    00000004     --HOLE-- [fill = 0]
+                  00000950    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00000958    00000010     (__TI_cinit_table)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.bss       0    20000000    00007530     UNINITIALIZED
+                  20000000    00007530     (.common:vet)
+
+.data      0    20007730    00000024     UNINITIALIZED
+                  20007730    00000024     Malha_Aberta.obj (.data)
+
+.stack     0    20007530    00000200     UNINITIALIZED
+                  20007530    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.stack)
+                  20007534    000001fc     --HOLE--
+
+__llvm_prf_cnts 
+*          0    20000000    00000000     UNINITIALIZED
+
+MODULE SUMMARY
+
+       Module                         code   ro data   rw data
+       ------                         ----   -------   -------
+    .\
+       Malha_Aberta.obj               900    0         30036  
+       tm4c123gh6pm_startup_ccs.obj   274    620       0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         1174   620       30036  
+                                                              
+    C:\ti\ccs1260\ccs\tools\compiler\ti-cgt-arm_20.2.7.LTS\lib\rtsv7M4_T_le_v4SPD16_eabi.lib
+       memcpy_t2.asm.obj              156    0         0      
+       memset_t2.asm.obj              122    0         0      
+       copy_decompress_lzss.c.obj     104    0         0      
+       autoinit.c.obj                 68     0         0      
+       boot_cortex_m.c.obj            52     0         0      
+       copy_decompress_none.c.obj     14     0         0      
+       copy_zero_init.c.obj           12     0         0      
+       exit.c.obj                     4      0         0      
+       pre_init.c.obj                 4      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         536    0         0      
+                                                              
+       Stack:                         0      0         512    
+       Linker Generated:              0      65        0      
+    +--+------------------------------+------+---------+---------+
+       Grand Total:                   1710   685       30548  
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00000958 records: 2, size/record: 8, table size: 16
+	.data: load addr=00000920, load size=0000001d bytes, run addr=20007730, run size=00000024 bytes, compression=lzss
+	.bss: load addr=00000950, load size=00000008 bytes, run addr=20000000, run size=00007530 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00000940 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_lzss
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                          
+-------   ----                          
+20007730  AD                            
+00000621  ADC0Seq0_Handler              
+00000623  ADC0Seq1_Handler              
+00000625  ADC0Seq2_Handler              
+00000627  ADC0Seq3_Handler              
+00000665  ADC1Seq0_Handler              
+00000667  ADC1Seq1_Handler              
+00000669  ADC1Seq2_Handler              
+0000066b  ADC1Seq3_Handler              
+00000345  ADC_Init                      
+00000917  C$$EXIT                       
+00000653  CAN0_Handler                  
+00000655  CAN1_Handler                  
+00000657  CAN2_Handler                  
+00000499  Clock_Init                    
+00000637  Comp0_Handler                 
+00000639  Comp1_Handler                 
+0000063b  Comp2_Handler                 
+000005ff  DebugMon_Handler              
+000006e9  DisableInterrupts             
+000006ed  EnableInterrupts              
+000006f9  EndCritical                   
+00000659  Ethernet_Handler              
+0000066f  ExtBus_Handler                
+000006a9  FPU_Handler                   
+000006b9  Fan0_Handler                  
+0000063f  FlashCtl_Handler              
+00000605  GPIOPortA_Handler             
+00000607  GPIOPortB_Handler             
+00000609  GPIOPortC_Handler             
+0000060b  GPIOPortD_Handler             
+0000060d  GPIOPortE_Handler             
+00000641  GPIOPortF_Handler             
+00000643  GPIOPortG_Handler             
+00000645  GPIOPortH_Handler             
+00000671  GPIOPortJ_Handler             
+00000673  GPIOPortK_Handler             
+00000675  GPIOPortL_Handler             
+000006b3  GPIOPortM_Handler             
+000006b5  GPIOPortN_Handler             
+000006bd  GPIOPortP1_Handler            
+000006bf  GPIOPortP2_Handler            
+000006c1  GPIOPortP3_Handler            
+000006c3  GPIOPortP4_Handler            
+000006c5  GPIOPortP5_Handler            
+000006c7  GPIOPortP6_Handler            
+000006c9  GPIOPortP7_Handler            
+000006bb  GPIOPortP_Handler             
+000006cd  GPIOPortQ1_Handler            
+000006cf  GPIOPortQ2_Handler            
+000006d1  GPIOPortQ3_Handler            
+000006d3  GPIOPortQ4_Handler            
+000006d5  GPIOPortQ5_Handler            
+000006d7  GPIOPortQ6_Handler            
+000006d9  GPIOPortQ7_Handler            
+000006cb  GPIOPortQ_Handler             
+000006db  GPIOPortR_Handler             
+000006dd  GPIOPortS_Handler             
+0000065b  Hibernate_Handler             
+00000615  I2C0_Handler                  
+0000064f  I2C1_Handler                  
+00000685  I2C2_Handler                  
+00000687  I2C3_Handler                  
+000006af  I2C4_Handler                  
+000006b1  I2C5_Handler                  
+0000066d  I2S0_Handler                  
+000006ad  LPC0_Handler                  
+000006ab  PECI0_Handler                 
+20007750  PPRenc                        
+00000617  PWM0Fault_Handler             
+00000619  PWM0Generator0_Handler        
+0000061b  PWM0Generator1_Handler        
+0000061d  PWM0Generator2_Handler        
+0000065f  PWM0Generator3_Handler        
+000006e7  PWM1Fault_Handler             
+000006df  PWM1Generator0_Handler        
+000006e1  PWM1Generator1_Handler        
+000006e3  PWM1Generator2_Handler        
+000006e5  PWM1Generator3_Handler        
+00000435  PWM1_3_A_Init                 
+000003d9  PWM1_3_B_Init                 
+00000601  PendSV_Handler                
+0000045b  PortF_Init                    
+0000061f  Quadrature0_Handler           
+00000651  Quadrature1_Handler           
+000006b7  Quadrature2_Handler           
+20007740  RPM                           
+000005f1  ResetISR                      
+00000613  SSI0_Handler                  
+00000649  SSI1_Handler                  
+00000677  SSI2_Handler                  
+00000679  SSI3_Handler                  
+000005fd  SVC_Handler                   
+000006f1  StartCritical                 
+0000063d  SysCtl_Handler                
+00000603  SysTick_Handler               
+000002cf  Timer0A_Handler               
+000002f9  Timer0A_Init                  
+0000062d  Timer0B_Handler               
+0000062f  Timer1A_Handler               
+00000631  Timer1B_Handler               
+00000633  Timer2A_Handler               
+00000635  Timer2B_Handler               
+0000064b  Timer3A_Handler               
+0000064d  Timer3B_Handler               
+00000689  Timer4A_Handler               
+0000068b  Timer4B_Handler               
+0000068d  Timer5A_Handler               
+0000068f  Timer5B_Handler               
+0000060f  UART0_Handler                 
+00000611  UART1_Handler                 
+00000647  UART2_Handler                 
+0000067b  UART3_Handler                 
+0000067d  UART4_Handler                 
+0000067f  UART5_Handler                 
+00000681  UART6_Handler                 
+00000683  UART7_Handler                 
+0000065d  USB0_Handler                  
+00000629  WDT_Handler                   
+000006ff  WaitForInterrupt              
+00000691  WideTimer0A_Handler           
+00000693  WideTimer0B_Handler           
+00000695  WideTimer1A_Handler           
+00000697  WideTimer1B_Handler           
+00000699  WideTimer2A_Handler           
+0000069b  WideTimer2B_Handler           
+0000069d  WideTimer3A_Handler           
+0000069f  WideTimer3B_Handler           
+000006a1  WideTimer4A_Handler           
+000006a3  WideTimer4B_Handler           
+000006a5  WideTimer5A_Handler           
+000006a7  WideTimer5B_Handler           
+20007730  __STACK_END                   
+00000200  __STACK_SIZE                  
+20007730  __STACK_TOP                   
+00000958  __TI_CINIT_Base               
+00000968  __TI_CINIT_Limit              
+00000940  __TI_Handler_Table_Base       
+0000094c  __TI_Handler_Table_Limit      
+00000881  __TI_auto_init_nobinit_nopinit
+00000819  __TI_decompress_lzss          
+000008f9  __TI_decompress_none          
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+00000000  __TI_static_base__            
+00000907  __TI_zero_init                
+0000079f  __aeabi_memclr                
+0000079f  __aeabi_memclr4               
+0000079f  __aeabi_memclr8               
+00000703  __aeabi_memcpy                
+00000703  __aeabi_memcpy4               
+00000703  __aeabi_memcpy8               
+000007a1  __aeabi_memset                
+000007a1  __aeabi_memset4               
+000007a1  __aeabi_memset8               
+ffffffff  __binit__                     
+ffffffff  __c_args__                    
+UNDEFED   __mpu_init                    
+20007530  __stack                       
+20000000  __start___llvm_prf_cnts       
+20000000  __stop___llvm_prf_cnts        
+000008c5  _c_int00_noargs               
+UNDEFED   _system_post_cinit            
+00000913  _system_pre_init              
+00000917  abort                         
+ffffffff  binit                         
+20007738  duty                          
+2000773c  duty2                         
+20007748  freqADC                       
+2000774c  freqPWM                       
+20007744  freqQEI                       
+00000000  g_pfnVectors                  
+0000026d  main                          
+00000703  memcpy                        
+000007a7  memset                        
+00000663  uDMA_Error                    
+00000661  uDMA_Handler                  
+20000000  vet                           
+20007734  x                             
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                          
+-------   ----                          
+00000000  __TI_static_base__            
+00000000  g_pfnVectors                  
+00000200  __STACK_SIZE                  
+0000026d  main                          
+000002cf  Timer0A_Handler               
+000002f9  Timer0A_Init                  
+00000345  ADC_Init                      
+000003d9  PWM1_3_B_Init                 
+00000435  PWM1_3_A_Init                 
+0000045b  PortF_Init                    
+00000499  Clock_Init                    
+000005f1  ResetISR                      
+000005fd  SVC_Handler                   
+000005ff  DebugMon_Handler              
+00000601  PendSV_Handler                
+00000603  SysTick_Handler               
+00000605  GPIOPortA_Handler             
+00000607  GPIOPortB_Handler             
+00000609  GPIOPortC_Handler             
+0000060b  GPIOPortD_Handler             
+0000060d  GPIOPortE_Handler             
+0000060f  UART0_Handler                 
+00000611  UART1_Handler                 
+00000613  SSI0_Handler                  
+00000615  I2C0_Handler                  
+00000617  PWM0Fault_Handler             
+00000619  PWM0Generator0_Handler        
+0000061b  PWM0Generator1_Handler        
+0000061d  PWM0Generator2_Handler        
+0000061f  Quadrature0_Handler           
+00000621  ADC0Seq0_Handler              
+00000623  ADC0Seq1_Handler              
+00000625  ADC0Seq2_Handler              
+00000627  ADC0Seq3_Handler              
+00000629  WDT_Handler                   
+0000062d  Timer0B_Handler               
+0000062f  Timer1A_Handler               
+00000631  Timer1B_Handler               
+00000633  Timer2A_Handler               
+00000635  Timer2B_Handler               
+00000637  Comp0_Handler                 
+00000639  Comp1_Handler                 
+0000063b  Comp2_Handler                 
+0000063d  SysCtl_Handler                
+0000063f  FlashCtl_Handler              
+00000641  GPIOPortF_Handler             
+00000643  GPIOPortG_Handler             
+00000645  GPIOPortH_Handler             
+00000647  UART2_Handler                 
+00000649  SSI1_Handler                  
+0000064b  Timer3A_Handler               
+0000064d  Timer3B_Handler               
+0000064f  I2C1_Handler                  
+00000651  Quadrature1_Handler           
+00000653  CAN0_Handler                  
+00000655  CAN1_Handler                  
+00000657  CAN2_Handler                  
+00000659  Ethernet_Handler              
+0000065b  Hibernate_Handler             
+0000065d  USB0_Handler                  
+0000065f  PWM0Generator3_Handler        
+00000661  uDMA_Handler                  
+00000663  uDMA_Error                    
+00000665  ADC1Seq0_Handler              
+00000667  ADC1Seq1_Handler              
+00000669  ADC1Seq2_Handler              
+0000066b  ADC1Seq3_Handler              
+0000066d  I2S0_Handler                  
+0000066f  ExtBus_Handler                
+00000671  GPIOPortJ_Handler             
+00000673  GPIOPortK_Handler             
+00000675  GPIOPortL_Handler             
+00000677  SSI2_Handler                  
+00000679  SSI3_Handler                  
+0000067b  UART3_Handler                 
+0000067d  UART4_Handler                 
+0000067f  UART5_Handler                 
+00000681  UART6_Handler                 
+00000683  UART7_Handler                 
+00000685  I2C2_Handler                  
+00000687  I2C3_Handler                  
+00000689  Timer4A_Handler               
+0000068b  Timer4B_Handler               
+0000068d  Timer5A_Handler               
+0000068f  Timer5B_Handler               
+00000691  WideTimer0A_Handler           
+00000693  WideTimer0B_Handler           
+00000695  WideTimer1A_Handler           
+00000697  WideTimer1B_Handler           
+00000699  WideTimer2A_Handler           
+0000069b  WideTimer2B_Handler           
+0000069d  WideTimer3A_Handler           
+0000069f  WideTimer3B_Handler           
+000006a1  WideTimer4A_Handler           
+000006a3  WideTimer4B_Handler           
+000006a5  WideTimer5A_Handler           
+000006a7  WideTimer5B_Handler           
+000006a9  FPU_Handler                   
+000006ab  PECI0_Handler                 
+000006ad  LPC0_Handler                  
+000006af  I2C4_Handler                  
+000006b1  I2C5_Handler                  
+000006b3  GPIOPortM_Handler             
+000006b5  GPIOPortN_Handler             
+000006b7  Quadrature2_Handler           
+000006b9  Fan0_Handler                  
+000006bb  GPIOPortP_Handler             
+000006bd  GPIOPortP1_Handler            
+000006bf  GPIOPortP2_Handler            
+000006c1  GPIOPortP3_Handler            
+000006c3  GPIOPortP4_Handler            
+000006c5  GPIOPortP5_Handler            
+000006c7  GPIOPortP6_Handler            
+000006c9  GPIOPortP7_Handler            
+000006cb  GPIOPortQ_Handler             
+000006cd  GPIOPortQ1_Handler            
+000006cf  GPIOPortQ2_Handler            
+000006d1  GPIOPortQ3_Handler            
+000006d3  GPIOPortQ4_Handler            
+000006d5  GPIOPortQ5_Handler            
+000006d7  GPIOPortQ6_Handler            
+000006d9  GPIOPortQ7_Handler            
+000006db  GPIOPortR_Handler             
+000006dd  GPIOPortS_Handler             
+000006df  PWM1Generator0_Handler        
+000006e1  PWM1Generator1_Handler        
+000006e3  PWM1Generator2_Handler        
+000006e5  PWM1Generator3_Handler        
+000006e7  PWM1Fault_Handler             
+000006e9  DisableInterrupts             
+000006ed  EnableInterrupts              
+000006f1  StartCritical                 
+000006f9  EndCritical                   
+000006ff  WaitForInterrupt              
+00000703  __aeabi_memcpy                
+00000703  __aeabi_memcpy4               
+00000703  __aeabi_memcpy8               
+00000703  memcpy                        
+0000079f  __aeabi_memclr                
+0000079f  __aeabi_memclr4               
+0000079f  __aeabi_memclr8               
+000007a1  __aeabi_memset                
+000007a1  __aeabi_memset4               
+000007a1  __aeabi_memset8               
+000007a7  memset                        
+00000819  __TI_decompress_lzss          
+00000881  __TI_auto_init_nobinit_nopinit
+000008c5  _c_int00_noargs               
+000008f9  __TI_decompress_none          
+00000907  __TI_zero_init                
+00000913  _system_pre_init              
+00000917  C$$EXIT                       
+00000917  abort                         
+00000940  __TI_Handler_Table_Base       
+0000094c  __TI_Handler_Table_Limit      
+00000958  __TI_CINIT_Base               
+00000968  __TI_CINIT_Limit              
+20000000  __start___llvm_prf_cnts       
+20000000  __stop___llvm_prf_cnts        
+20000000  vet                           
+20007530  __stack                       
+20007730  AD                            
+20007730  __STACK_END                   
+20007730  __STACK_TOP                   
+20007734  x                             
+20007738  duty                          
+2000773c  duty2                         
+20007740  RPM                           
+20007744  freqQEI                       
+20007748  freqADC                       
+2000774c  freqPWM                       
+20007750  PPRenc                        
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+ffffffff  __binit__                     
+ffffffff  __c_args__                    
+ffffffff  binit                         
+UNDEFED   __mpu_init                    
+UNDEFED   _system_post_cinit            
+
+[180 symbols]

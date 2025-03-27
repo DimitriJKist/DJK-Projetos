@@ -1,0 +1,17 @@
+[
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/sdcard-spi/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"/Users/javiermartinez/TivaWare\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/sdcard-spi/main.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/sdcard-spi/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"/Users/javiermartinez/TivaWare\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/sdcard-spi/sdcard.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/sdcard-spi/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"/Users/javiermartinez/TivaWare\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/sdcard-spi/tm4c123gh6pm_startup_ccs.c"
+   }
+]

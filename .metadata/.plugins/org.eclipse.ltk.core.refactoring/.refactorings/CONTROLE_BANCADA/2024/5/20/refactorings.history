@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;CONTROLE_BANCADA/MALH_ABRT.c&apos; to &apos;CONTROLE_CC.c&apos;" description="Rename resource &apos;MALH_ABRT.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="MALH_ABRT.c" name="CONTROLE_CC.c" stamp="1715695363123" updateReferences="true"/>
+</session>

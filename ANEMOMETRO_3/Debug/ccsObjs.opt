@@ -1,0 +1,8 @@
+"./FlashProgram.obj"
+"./PLL.obj"
+"./Scoreboard.obj"
+"./UART.obj"
+"./main_Anemometro.obj"
+"./tm4c123gh6pm_startup_ccs.obj"
+"../tm4c123gh6pm.cmd"
+-llibc.a

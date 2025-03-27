@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Controle Posiçao Trabalho final controle digital/main_Anemometro.c&apos; to &apos;MAIN.c&apos;" description="Rename resource &apos;main_Anemometro.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="main_Anemometro.c" name="MAIN.c" stamp="1734783215013" updateReferences="true"/>
+</session>

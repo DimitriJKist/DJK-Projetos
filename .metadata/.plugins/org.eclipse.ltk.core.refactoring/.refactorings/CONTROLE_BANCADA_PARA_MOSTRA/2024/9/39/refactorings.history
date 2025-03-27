@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;CONTROLE_BANCADA_PARA_MOSTRA/CONTROLE_CC.c&apos; to &apos;CONTROLE_CC_MOSTRA.c&apos;" description="Rename resource &apos;CONTROLE_CC.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="CONTROLE_CC.c" name="CONTROLE_CC_MOSTRA.c" stamp="1727208030133" updateReferences="true"/>
+</session>

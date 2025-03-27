@@ -1,0 +1,170 @@
+
+PARA SALVAR NAS POSIÇOES DA MEMORIA 
+else{
+           if(h==0){
+               NUM_11=LAST_VEL;
+               h++;
+               count1 = 1;
+               LAST_VEL=(in/3);
+           }
+           else{
+               NUM_12=LAST_VEL;
+               VEL=NUM_12+(NUM_11<<16);
+               Flash_Write(VELSTART + i, VEL);
+               i=i+4;
+               numsavesvel++;// conta quantos valores foram salvos
+               count1 = 1;
+               LAST_VEL=(in/3);
+               h=0;
+               
+               
+               
+PARA ENVIAR PRA FORA POR UART
+void DADOS_OUT(void){
+    uint32_t DADO=0;
+    uint32_t DADO1=0;
+    uint32_t DADO2=0;
+    int num=0;
+
+    UART_OutString("Velocidade:\r\n");
+        for(int aux3=0; aux3<numsavesvel; aux3++){
+            DADO=(*((volatile unsigned long *)(VELSTART+num)));
+            DADO1=(DADO>>16);
+            DADO2=(DADO&0x0000FFFF);
+            UART_OutUDec(DADO1);
+            UART_OutString("\r\n");
+            UART_OutUDec(DADO2);
+            UART_OutString("\r\n");
+            num=num+4;
+    }
+        num=0;
+    UART_OutString("Direcao:\r\n");
+        for(int aux3=0; aux3<numsavesdir; aux3++){
+            DADO=(*((volatile unsigned long *)(DIRSTART+num)));
+            DADO1=(DADO>>16);
+            DADO2=(DADO&0x0000FFFF);
+            UART_OutUDec(DADO1);
+            UART_OutString("\r\n");
+            UART_OutUDec(DADO2);
+            UART_OutString("\r\n");
+            num=num+4;
+      }
+}
+
+
+
+
+void Enviar_DIR(float volatile in){
+        if(count2 < 30){
+           LAST_DIR = (in/30) + LAST_DIR; // FAZ A MÉDIA dos valores de direçao a cada
+                                          // 1 seg para ser salva a cada 30seg (30 valores))
+           count2++;
+        }
+        else{
+           if(j==0){
+               NUM_21=LAST_DIR;
+               j++;
+               count2 = 1;
+               LAST_DIR=(in/30);
+           }
+           else{
+               NUM_22=LAST_DIR;
+               DIR=NUM_22+(NUM_21<<16);
+               Flash_Write(DIRSTART + x, DIR);
+               x=x+4;
+               numsavesdir++;
+               LAST_DIR = (in/30);
+               count2 = 1;
+               j=0;
+           }
+       }
+}
+void SEND(void){
+while(numsavesdir!=0 || numsavesvel!=0){
+    if(numsavesdir!=0){
+        DADO=(*((volatile unsigned long *)(DIRSTART+j)));
+        UART_OutString("AT+SEND=5:");
+        UART_OutChar(DIRECAO[0]);
+        UART_OutChar(DIRECAO[1]);
+        UART_OutChar('\n');
+        j=j-4;
+        if(j==0){
+            numsavesdir=0;
+            flagdir=0;
+            for(b=DIRSTART; b<DIRMID; b=b+1024){
+            Flash_Erase(b);}
+            b=0;
+        }
+    }
+    if(numsavesvel !=0){
+        DADO=(*((volatile unsigned long *)(VELSTART+i)));
+        UART_OutString("AT+SEND=5:55604;340");
+        UART_OutUDec(DADO);
+        UART_OutChar('\n');
+        i=i-4;
+        if(i==0){
+            numsavesvel=0;
+            flagvel=0;
+            for(b=VELSTART; b<VELMID; b=b+1024){
+            Flash_Erase(b);}
+            b=0;
+       }
+    }
+  }
+}
+
+  for(b=DIRSTART; b<VELEND; b=b+1024){
+        Flash_Erase(b);
+      }
+      
+  GPIO_PORTF_DATA_R = 0x02;    //LED RED
+  while((GPIO_PORTF_DATA_R&0x10) != 0x00){}
+  GPIO_PORTF_DATA_R = 0x08;    //LED VERDE
+  #define DIRSTART  0x010000 // 0x30000/2 = 0x18000
+#define DIRMID    0x200000
+#define DIREND    0x027FFF // de 0x10000 até 0x28000-1
+#define VELSTART  0x028000
+#define VELMID    0x300000
+#define VELEND    0x03FFFF// de 0x28000 até 0x40000-1
+  
+  
+void Flash_init(void){
+    FLASH_FMPRE1_R     = 0xFFFFFFFF;
+    FLASH_FMPRE2_R     = 0xFFFFFFFF;
+    FLASH_FMPRE3_R     = 0xFFFFFFFF;
+    FLASH_FMPPE1_R     = 0xFFFFFFFF;
+    FLASH_FMPPE2_R     = 0xFFFFFFFF;
+    FLASH_FMPPE3_R     = 0xFFFFFFFF;
+}
+
+
+
+//  SSI2_INIT();
+
+  GPIO_PORTF_DATA_R = 0x02;    //LED RED
+  while((GPIO_PORTF_DATA_R&0x10) != 0x00){}
+  GPIO_PORTF_DATA_R = 0x08;    //LED VERDE
+//  SSI_OUT(0b01);
+//  SSI_OUT(0b111010);
+//  SSI_OUT(0b00000000);
+//  SSI_OUT(0b00000000);
+//  SSI_OUT(0b00000000);
+//  SSI_OUT(0b00000000);
+//  SSI_OUT(0b0111010);
+//  SSI_OUT(0b1);
+//  SSI_OUT(0b01);
+//    SSI_OUT(0b111010);
+//    SSI_OUT(0b00000000);
+//    SSI_OUT(0b00000000);
+//    SSI_OUT(0b00000000);
+//    SSI_OUT(0b00000000);
+//    SSI_OUT(0b0111010);
+//    SSI_OUT(0b1);
+//    SSI_OUT(0b01);
+//      SSI_OUT(0b111010);
+//      SSI_OUT(0b00000000);
+//      SSI_OUT(0b00000000);
+//      SSI_OUT(0b00000000);
+//      SSI_OUT(0b00000000);
+//      SSI_OUT(0b0111010);
+//      SSI_OUT(0b1);

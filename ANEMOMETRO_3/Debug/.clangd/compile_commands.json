@@ -1,0 +1,62 @@
+[
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Debug/FlashProgram.asm"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Debug/PLL.asm"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Debug/Scoreboard.asm"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Debug/UART.asm"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Debug/main_Anemometro.asm"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Debug/tm4c123gh6pm_startup_ccs.asm"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/FlashProgram.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/PLL.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Scoreboard.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/UART.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/main_Anemometro.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/Debug",
+      "command"   : "clang++ -I\"C:/ti/SD-card-TivaC-library-master\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM",
+      "file"      : "C:/Users/dimit/workspace_v12/ANEMOMETRO_3/tm4c123gh6pm_startup_ccs.c"
+   }
+]

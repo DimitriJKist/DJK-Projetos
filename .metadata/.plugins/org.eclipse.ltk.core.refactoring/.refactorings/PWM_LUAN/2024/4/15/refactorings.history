@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;PWM_LUAN/PWM.c&apos; to &apos;MALH_ABRT.c&apos;" description="Rename resource &apos;PWM.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="PWM.c" name="MALH_ABRT.c" stamp="1712607232558" updateReferences="true"/>
+</session>

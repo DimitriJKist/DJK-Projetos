@@ -1,0 +1,1921 @@
+******************************************************************************
+             TMS320C2000 Linker PC v22.6.1                     
+******************************************************************************
+>> Linked Mon Apr 29 17:57:43 2024
+
+OUTPUT FILE NAME:   <Emulacao_CFW11_Ventilador.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 000003a6
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+PAGE 0:
+  BEGIN                 00000000   00000002  00000002  00000000  RWIX
+  RAMM0                 00000122   000002de  000002dd  00000001  RWIX
+  RAMM2                 00000800   00001800  00000000  00001800  RWIX
+  RAMLS0                00008000   00000800  00000000  00000800  RWIX
+  RAMLS1                00008800   00000800  00000000  00000800  RWIX
+  RAMLS2                00009000   00000800  00000000  00000800  RWIX
+  RAMLS3                00009800   00001000  000001f0  00000e10  RWIX
+  RAMD0                 0000b000   00000800  00000000  00000800  RWIX
+  RAMGS6                0000c000   00001000  00001000  00000000  RWIX
+  RAMGS7                0000d000   00001000  00000756  000008aa  RWIX
+  RESET                 003fffc0   00000002  00000000  00000002  RWIX
+
+PAGE 1:
+  BOOT_RSVD             00000002   00000120  00000000  00000120  RWIX
+  RAMM1                 00000400   00000400  00000200  00000200  RWIX
+  ADCA_RESULT           00000b00   00000020  00000018  00000008  RWIX
+  ADCB_RESULT           00000b20   00000020  00000018  00000008  RWIX
+  ADCC_RESULT           00000b40   00000020  00000018  00000008  RWIX
+  ADCD_RESULT           00000b60   00000020  00000018  00000008  RWIX
+  CPU_TIMER0            00000c00   00000008  00000008  00000000  RWIX
+  CPU_TIMER1            00000c08   00000008  00000008  00000000  RWIX
+  CPU_TIMER2            00000c10   00000008  00000008  00000000  RWIX
+  PIE_CTRL              00000ce0   00000020  0000001a  00000006  RWIX
+  PIE_VECT              00000d00   00000200  000001c0  00000040  RWIX
+  DMA                   00001000   00000200  000000e0  00000120  RWIX
+  CLA1                  00001400   00000040  0000003c  00000004  RWIX
+  EPWM1                 00004000   00000100  000000d6  0000002a  RWIX
+  EPWM2                 00004100   00000100  000000d6  0000002a  RWIX
+  EPWM3                 00004200   00000100  000000d6  0000002a  RWIX
+  EPWM4                 00004300   00000100  000000d6  0000002a  RWIX
+  EPWM5                 00004400   00000100  000000d6  0000002a  RWIX
+  EPWM6                 00004500   00000100  000000d6  0000002a  RWIX
+  EPWM7                 00004600   00000100  000000d6  0000002a  RWIX
+  EPWM8                 00004700   00000100  000000d6  0000002a  RWIX
+  EPWM9                 00004800   00000100  000000d6  0000002a  RWIX
+  EPWM10                00004900   00000100  000000d6  0000002a  RWIX
+  EPWM11                00004a00   00000100  000000d6  0000002a  RWIX
+  EPWM12                00004b00   00000100  000000d6  0000002a  RWIX
+  ECAP1                 00005000   00000020  0000001a  00000006  RWIX
+  ECAP2                 00005020   00000020  0000001a  00000006  RWIX
+  ECAP3                 00005040   00000020  0000001a  00000006  RWIX
+  ECAP4                 00005060   00000020  0000001a  00000006  RWIX
+  ECAP5                 00005080   00000020  0000001a  00000006  RWIX
+  ECAP6                 000050a0   00000020  0000001a  00000006  RWIX
+  EQEP1                 00005100   00000040  00000022  0000001e  RWIX
+  EQEP2                 00005140   00000040  00000022  0000001e  RWIX
+  EQEP3                 00005180   00000040  00000022  0000001e  RWIX
+  DACA                  00005c00   00000010  00000006  0000000a  RWIX
+  DACB                  00005c10   00000010  00000006  0000000a  RWIX
+  DACC                  00005c20   00000010  00000006  0000000a  RWIX
+  CMPSS1                00005c80   00000020  0000001b  00000005  RWIX
+  CMPSS2                00005ca0   00000020  0000001b  00000005  RWIX
+  CMPSS3                00005cc0   00000020  0000001b  00000005  RWIX
+  CMPSS4                00005ce0   00000020  0000001b  00000005  RWIX
+  CMPSS5                00005d00   00000020  0000001b  00000005  RWIX
+  CMPSS6                00005d20   00000020  0000001b  00000005  RWIX
+  CMPSS7                00005d40   00000020  0000001b  00000005  RWIX
+  CMPSS8                00005d60   00000020  0000001b  00000005  RWIX
+  SDFM1                 00005e00   00000080  00000048  00000038  RWIX
+  SDFM2                 00005e80   00000080  00000048  00000038  RWIX
+  MCBSPA                00006000   00000040  00000024  0000001c  RWIX
+  MCBSPB                00006040   00000040  00000024  0000001c  RWIX
+  SPIA                  00006100   00000010  00000010  00000000  RWIX
+  SPIB                  00006110   00000010  00000010  00000000  RWIX
+  SPIC                  00006120   00000010  00000010  00000000  RWIX
+  SPID                  00006130   00000010  00000000  00000010  RWIX
+  UPP                   00006200   00000100  00000048  000000b8  RWIX
+  WD                    00007000   00000040  0000002b  00000015  RWIX
+  NMIINTRUPT            00007060   00000010  00000007  00000009  RWIX
+  XINT                  00007070   00000010  0000000b  00000005  RWIX
+  SCIA                  00007200   00000010  00000010  00000000  RWIX
+  SCIB                  00007210   00000010  00000010  00000000  RWIX
+  SCIC                  00007220   00000010  00000010  00000000  RWIX
+  SCID                  00007230   00000010  00000010  00000000  RWIX
+  I2CA                  00007300   00000040  00000022  0000001e  RWIX
+  I2CB                  00007340   00000040  00000022  0000001e  RWIX
+  ADCA                  00007400   00000080  0000007c  00000004  RWIX
+  ADCB                  00007480   00000080  0000007c  00000004  RWIX
+  ADCC                  00007500   00000080  0000007c  00000004  RWIX
+  ADCD                  00007580   00000080  0000007c  00000004  RWIX
+  INPUT_XBAR            00007900   00000040  0000002e  00000012  RWIX
+  TRIG                  00007940   00000010  00000006  0000000a  RWIX
+  DMACLASRCSEL          00007980   00000040  0000001a  00000026  RWIX
+  EPWM_XBAR             00007a00   00000040  00000040  00000000  RWIX
+  CLB_XBAR              00007a40   00000040  00000000  00000040  RWIX
+  OUTPUT_XBAR           00007a80   00000040  00000040  00000000  RWIX
+  GPIOCTRL              00007c00   00000180  00000180  00000000  RWIX
+  GPIODAT               00007f00   00000030  00000030  00000000  RWIX
+  RAMLS5                0000a800   00000800  0000027e  00000582  RWIX
+  RAMD1                 0000b800   00000800  00000000  00000800  RWIX
+  RAMGS13               0000e000   0000e000  0000927c  00004d84  RWIX
+  CPU2TOCPU1RAM         0003f800   00000400  00000000  00000400  RWIX
+  CPU1TOCPU2RAM         0003fc00   00000400  00000000  00000400  RWIX
+  EMIF1                 00047000   00000800  00000058  000007a8  RWIX
+  EMIF2                 00047800   00000800  00000058  000007a8  RWIX
+  CANA                  00048000   00001000  00000162  00000e9e  RWIX
+  CANB                  0004a000   00001000  00000162  00000e9e  RWIX
+  IPC                   00050000   00001000  00000026  00000fda  RWIX
+  DEV_CFG               0005d000   00000180  00000126  0000005a  RWIX
+  ANALOG_SUBSYS         0005d180   00000080  0000003e  00000042  RWIX
+  CLK_CFG               0005d200   00000100  00000032  000000ce  RWIX
+  CPU_SYS               0005d300   00000100  00000082  0000007e  RWIX
+  HWBIST                0005e000   00000100  000000a2  0000005e  RWIX
+  PBIST                 0005e200   00000200  000001e6  0000001a  RWIX
+  ROMPREFETCH           0005e608   00000002  00000002  00000000  RWIX
+  DCSM_Z1               0005f000   00000030  00000022  0000000e  RWIX
+  DCSM_Z2               0005f040   00000030  00000022  0000000e  RWIX
+  DCSM_COMMON           0005f070   00000010  00000006  0000000a  RWIX
+  MEMCFG                0005f400   00000080  00000076  0000000a  RWIX
+  EMIF1CONFIG           0005f480   00000020  0000000a  00000016  RWIX
+  EMIF2CONFIG           0005f4a0   00000020  0000000a  00000016  RWIX
+  ACCESSPROTECTION      0005f4c0   00000040  0000002e  00000012  RWIX
+  MEMORYERROR           0005f500   00000040  0000003a  00000006  RWIX
+  ROMWAITSTATE          0005f540   00000002  00000002  00000000  RWIX
+  FLASH0_CTRL           0005f800   00000300  00000182  0000017e  RWIX
+  FLASH0_ECC            0005fb00   00000040  00000028  00000018  RWIX
+  DCSM_Z1_OTP           00078000   00000020  0000001a  00000006  RWIX
+  DCSM_Z2_OTP           00078200   00000020  0000001a  00000006  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+codestart 
+*          0    00000000    00000002     
+                  00000000    00000002     F2837xD_CodeStartBranch.obj (codestart)
+
+ramfuncs   0    00000122    00000004     
+                  00000122    00000004     F2837xD_usDelay.obj (ramfuncs)
+
+.cinit     0    00009800    000001f0     
+                  00009800    000001d6     main.obj (.cinit)
+                  000099d6    0000000e     rts2800_fpu32.lib : exit.c.obj (.cinit)
+                  000099e4    00000005                       : _lock.c.obj (.cinit:__lock)
+                  000099e9    00000005                       : _lock.c.obj (.cinit:__unlock)
+                  000099ee    00000002     --HOLE-- [fill = 0]
+
+.pinit     0    00000122    00000000     UNINITIALIZED
+
+.reset     0    003fffc0    00000002     DSECT
+                  003fffc0    00000002     rts2800_fpu32.lib : boot28.asm.obj (.reset)
+
+.stack     1    00000400    00000200     UNINITIALIZED
+                  00000400    00000200     --HOLE--
+
+AdcaResultFile 
+*          1    00000b00    00000018     UNINITIALIZED
+                  00000b00    00000018     F2837xD_GlobalVariableDefs.obj (AdcaResultFile)
+
+AdcbResultFile 
+*          1    00000b20    00000018     UNINITIALIZED
+                  00000b20    00000018     F2837xD_GlobalVariableDefs.obj (AdcbResultFile)
+
+AdccResultFile 
+*          1    00000b40    00000018     UNINITIALIZED
+                  00000b40    00000018     F2837xD_GlobalVariableDefs.obj (AdccResultFile)
+
+AdcdResultFile 
+*          1    00000b60    00000018     UNINITIALIZED
+                  00000b60    00000018     F2837xD_GlobalVariableDefs.obj (AdcdResultFile)
+
+CpuTimer0RegsFile 
+*          1    00000c00    00000008     UNINITIALIZED
+                  00000c00    00000008     F2837xD_GlobalVariableDefs.obj (CpuTimer0RegsFile)
+
+CpuTimer1RegsFile 
+*          1    00000c08    00000008     UNINITIALIZED
+                  00000c08    00000008     F2837xD_GlobalVariableDefs.obj (CpuTimer1RegsFile)
+
+CpuTimer2RegsFile 
+*          1    00000c10    00000008     UNINITIALIZED
+                  00000c10    00000008     F2837xD_GlobalVariableDefs.obj (CpuTimer2RegsFile)
+
+PieCtrlRegsFile 
+*          1    00000ce0    0000001a     UNINITIALIZED
+                  00000ce0    0000001a     F2837xD_GlobalVariableDefs.obj (PieCtrlRegsFile)
+
+Cla1RegsFile 
+*          1    00001400    0000003c     UNINITIALIZED
+                  00001400    0000003c     F2837xD_GlobalVariableDefs.obj (Cla1RegsFile)
+
+DacaRegsFile 
+*          1    00005c00    00000006     UNINITIALIZED
+                  00005c00    00000006     F2837xD_GlobalVariableDefs.obj (DacaRegsFile)
+
+DacbRegsFile 
+*          1    00005c10    00000006     UNINITIALIZED
+                  00005c10    00000006     F2837xD_GlobalVariableDefs.obj (DacbRegsFile)
+
+DaccRegsFile 
+*          1    00005c20    00000006     UNINITIALIZED
+                  00005c20    00000006     F2837xD_GlobalVariableDefs.obj (DaccRegsFile)
+
+.econst    1    0000a800    000001c4     
+                  0000a800    000001c0     F2837xD_PieVect.obj (.econst:_PieVectTableInit)
+                  0000a9c0    00000004     FuncoesGerais.obj (.econst)
+
+GETBUFFER 
+*          0    0003f800    00000000     DSECT
+
+GETWRITEIDX 
+*          0    0003f800    00000000     DSECT
+
+PUTREADIDX 
+*          0    0003f800    00000000     DSECT
+
+PieVectTableFile 
+*          1    00000d00    000001c0     UNINITIALIZED
+                  00000d00    000001c0     F2837xD_GlobalVariableDefs.obj (PieVectTableFile)
+
+EmuKeyVar 
+*          1    00000d00    00000001     UNINITIALIZED
+                  00000d00    00000001     F2837xD_GlobalVariableDefs.obj (EmuKeyVar)
+
+EmuBModeVar 
+*          1    00000d01    00000001     UNINITIALIZED
+                  00000d01    00000001     F2837xD_GlobalVariableDefs.obj (EmuBModeVar)
+
+FlashCallbackVar 
+*          1    00000d02    00000000     UNINITIALIZED
+
+FlashScalingVar 
+*          1    00000d02    00000000     UNINITIALIZED
+
+DmaRegsFile 
+*          1    00001000    000000e0     UNINITIALIZED
+                  00001000    000000e0     F2837xD_GlobalVariableDefs.obj (DmaRegsFile)
+
+EPwm1RegsFile 
+*          1    00004000    000000d6     UNINITIALIZED
+                  00004000    000000d6     F2837xD_GlobalVariableDefs.obj (EPwm1RegsFile)
+
+EPwm2RegsFile 
+*          1    00004100    000000d6     UNINITIALIZED
+                  00004100    000000d6     F2837xD_GlobalVariableDefs.obj (EPwm2RegsFile)
+
+EPwm3RegsFile 
+*          1    00004200    000000d6     UNINITIALIZED
+                  00004200    000000d6     F2837xD_GlobalVariableDefs.obj (EPwm3RegsFile)
+
+EPwm4RegsFile 
+*          1    00004300    000000d6     UNINITIALIZED
+                  00004300    000000d6     F2837xD_GlobalVariableDefs.obj (EPwm4RegsFile)
+
+EPwm5RegsFile 
+*          1    00004400    000000d6     UNINITIALIZED
+                  00004400    000000d6     F2837xD_GlobalVariableDefs.obj (EPwm5RegsFile)
+
+EPwm6RegsFile 
+*          1    00004500    000000d6     UNINITIALIZED
+                  00004500    000000d6     F2837xD_GlobalVariableDefs.obj (EPwm6RegsFile)
+
+EPwm7RegsFile 
+*          1    00004600    000000d6     UNINITIALIZED
+                  00004600    000000d6     F2837xD_GlobalVariableDefs.obj (EPwm7RegsFile)
+
+EPwm8RegsFile 
+*          1    00004700    000000d6     UNINITIALIZED
+                  00004700    000000d6     F2837xD_GlobalVariableDefs.obj (EPwm8RegsFile)
+
+EPwm9RegsFile 
+*          1    00004800    000000d6     UNINITIALIZED
+                  00004800    000000d6     F2837xD_GlobalVariableDefs.obj (EPwm9RegsFile)
+
+EPwm10RegsFile 
+*          1    00004900    000000d6     UNINITIALIZED
+                  00004900    000000d6     F2837xD_GlobalVariableDefs.obj (EPwm10RegsFile)
+
+EPwm11RegsFile 
+*          1    00004a00    000000d6     UNINITIALIZED
+                  00004a00    000000d6     F2837xD_GlobalVariableDefs.obj (EPwm11RegsFile)
+
+EPwm12RegsFile 
+*          1    00004b00    000000d6     UNINITIALIZED
+                  00004b00    000000d6     F2837xD_GlobalVariableDefs.obj (EPwm12RegsFile)
+
+ECap1RegsFile 
+*          1    00005000    0000001a     UNINITIALIZED
+                  00005000    0000001a     F2837xD_GlobalVariableDefs.obj (ECap1RegsFile)
+
+ECap2RegsFile 
+*          1    00005020    0000001a     UNINITIALIZED
+                  00005020    0000001a     F2837xD_GlobalVariableDefs.obj (ECap2RegsFile)
+
+ECap3RegsFile 
+*          1    00005040    0000001a     UNINITIALIZED
+                  00005040    0000001a     F2837xD_GlobalVariableDefs.obj (ECap3RegsFile)
+
+ECap4RegsFile 
+*          1    00005060    0000001a     UNINITIALIZED
+                  00005060    0000001a     F2837xD_GlobalVariableDefs.obj (ECap4RegsFile)
+
+ECap5RegsFile 
+*          1    00005080    0000001a     UNINITIALIZED
+                  00005080    0000001a     F2837xD_GlobalVariableDefs.obj (ECap5RegsFile)
+
+ECap6RegsFile 
+*          1    000050a0    0000001a     UNINITIALIZED
+                  000050a0    0000001a     F2837xD_GlobalVariableDefs.obj (ECap6RegsFile)
+
+EQep1RegsFile 
+*          1    00005100    00000022     UNINITIALIZED
+                  00005100    00000022     F2837xD_GlobalVariableDefs.obj (EQep1RegsFile)
+
+EQep2RegsFile 
+*          1    00005140    00000022     UNINITIALIZED
+                  00005140    00000022     F2837xD_GlobalVariableDefs.obj (EQep2RegsFile)
+
+EQep3RegsFile 
+*          1    00005180    00000022     UNINITIALIZED
+                  00005180    00000022     F2837xD_GlobalVariableDefs.obj (EQep3RegsFile)
+
+Sdfm1RegsFile 
+*          1    00005e00    00000048     UNINITIALIZED
+                  00005e00    00000048     F2837xD_GlobalVariableDefs.obj (Sdfm1RegsFile)
+
+Sdfm2RegsFile 
+*          1    00005e80    00000048     UNINITIALIZED
+                  00005e80    00000048     F2837xD_GlobalVariableDefs.obj (Sdfm2RegsFile)
+
+McbspaRegsFile 
+*          1    00006000    00000024     UNINITIALIZED
+                  00006000    00000024     F2837xD_GlobalVariableDefs.obj (McbspaRegsFile)
+
+McbspbRegsFile 
+*          1    00006040    00000024     UNINITIALIZED
+                  00006040    00000024     F2837xD_GlobalVariableDefs.obj (McbspbRegsFile)
+
+SpiaRegsFile 
+*          1    00006100    00000010     UNINITIALIZED
+                  00006100    00000010     F2837xD_GlobalVariableDefs.obj (SpiaRegsFile)
+
+SpibRegsFile 
+*          1    00006110    00000010     UNINITIALIZED
+                  00006110    00000010     F2837xD_GlobalVariableDefs.obj (SpibRegsFile)
+
+SpicRegsFile 
+*          1    00006120    00000010     UNINITIALIZED
+                  00006120    00000010     F2837xD_GlobalVariableDefs.obj (SpicRegsFile)
+
+UppRegsFile 
+*          1    00006200    00000048     UNINITIALIZED
+                  00006200    00000048     F2837xD_GlobalVariableDefs.obj (UppRegsFile)
+
+WdRegsFile 
+*          1    00007000    0000002b     UNINITIALIZED
+                  00007000    0000002b     F2837xD_GlobalVariableDefs.obj (WdRegsFile)
+
+NmiIntruptRegsFile 
+*          1    00007060    00000007     UNINITIALIZED
+                  00007060    00000007     F2837xD_GlobalVariableDefs.obj (NmiIntruptRegsFile)
+
+XintRegsFile 
+*          1    00007070    0000000b     UNINITIALIZED
+                  00007070    0000000b     F2837xD_GlobalVariableDefs.obj (XintRegsFile)
+
+SciaRegsFile 
+*          1    00007200    00000010     UNINITIALIZED
+                  00007200    00000010     F2837xD_GlobalVariableDefs.obj (SciaRegsFile)
+
+ScibRegsFile 
+*          1    00007210    00000010     UNINITIALIZED
+                  00007210    00000010     F2837xD_GlobalVariableDefs.obj (ScibRegsFile)
+
+ScicRegsFile 
+*          1    00007220    00000010     UNINITIALIZED
+                  00007220    00000010     F2837xD_GlobalVariableDefs.obj (ScicRegsFile)
+
+ScidRegsFile 
+*          1    00007230    00000010     UNINITIALIZED
+                  00007230    00000010     F2837xD_GlobalVariableDefs.obj (ScidRegsFile)
+
+I2caRegsFile 
+*          1    00007300    00000022     UNINITIALIZED
+                  00007300    00000022     F2837xD_GlobalVariableDefs.obj (I2caRegsFile)
+
+I2cbRegsFile 
+*          1    00007340    00000022     UNINITIALIZED
+                  00007340    00000022     F2837xD_GlobalVariableDefs.obj (I2cbRegsFile)
+
+AdcaRegsFile 
+*          1    00007400    0000007c     UNINITIALIZED
+                  00007400    0000007c     F2837xD_GlobalVariableDefs.obj (AdcaRegsFile)
+
+AdcbRegsFile 
+*          1    00007480    0000007c     UNINITIALIZED
+                  00007480    0000007c     F2837xD_GlobalVariableDefs.obj (AdcbRegsFile)
+
+AdccRegsFile 
+*          1    00007500    0000007c     UNINITIALIZED
+                  00007500    0000007c     F2837xD_GlobalVariableDefs.obj (AdccRegsFile)
+
+AdcdRegsFile 
+*          1    00007580    0000007c     UNINITIALIZED
+                  00007580    0000007c     F2837xD_GlobalVariableDefs.obj (AdcdRegsFile)
+
+AnalogSubsysRegsFile 
+*          1    0005d180    0000003e     UNINITIALIZED
+                  0005d180    0000003e     F2837xD_GlobalVariableDefs.obj (AnalogSubsysRegsFile)
+
+Cla1SoftIntRegsFile 
+*          1    00000ce0    00000004     DSECT
+                  00000ce0    00000004     F2837xD_GlobalVariableDefs.obj (Cla1SoftIntRegsFile)
+
+Cmpss1RegsFile 
+*          1    00005c80    0000001b     UNINITIALIZED
+                  00005c80    0000001b     F2837xD_GlobalVariableDefs.obj (Cmpss1RegsFile)
+
+Cmpss2RegsFile 
+*          1    00005ca0    0000001b     UNINITIALIZED
+                  00005ca0    0000001b     F2837xD_GlobalVariableDefs.obj (Cmpss2RegsFile)
+
+Cmpss3RegsFile 
+*          1    00005cc0    0000001b     UNINITIALIZED
+                  00005cc0    0000001b     F2837xD_GlobalVariableDefs.obj (Cmpss3RegsFile)
+
+Cmpss4RegsFile 
+*          1    00005ce0    0000001b     UNINITIALIZED
+                  00005ce0    0000001b     F2837xD_GlobalVariableDefs.obj (Cmpss4RegsFile)
+
+Cmpss5RegsFile 
+*          1    00005d00    0000001b     UNINITIALIZED
+                  00005d00    0000001b     F2837xD_GlobalVariableDefs.obj (Cmpss5RegsFile)
+
+Cmpss6RegsFile 
+*          1    00005d20    0000001b     UNINITIALIZED
+                  00005d20    0000001b     F2837xD_GlobalVariableDefs.obj (Cmpss6RegsFile)
+
+Cmpss7RegsFile 
+*          1    00005d40    0000001b     UNINITIALIZED
+                  00005d40    0000001b     F2837xD_GlobalVariableDefs.obj (Cmpss7RegsFile)
+
+Cmpss8RegsFile 
+*          1    00005d60    0000001b     UNINITIALIZED
+                  00005d60    0000001b     F2837xD_GlobalVariableDefs.obj (Cmpss8RegsFile)
+
+InputXbarRegsFile 
+*          1    00007900    0000002e     UNINITIALIZED
+                  00007900    0000002e     F2837xD_GlobalVariableDefs.obj (InputXbarRegsFile)
+
+TrigRegsFile 
+*          1    00007940    00000006     UNINITIALIZED
+                  00007940    00000006     F2837xD_GlobalVariableDefs.obj (TrigRegsFile)
+
+DmaClaSrcSelRegsFile 
+*          1    00007980    0000001a     UNINITIALIZED
+                  00007980    0000001a     F2837xD_GlobalVariableDefs.obj (DmaClaSrcSelRegsFile)
+
+EPwmXbarRegsFile 
+*          1    00007a00    00000040     UNINITIALIZED
+                  00007a00    00000040     F2837xD_GlobalVariableDefs.obj (EPwmXbarRegsFile)
+
+OutputXbarRegsFile 
+*          1    00007a80    00000040     UNINITIALIZED
+                  00007a80    00000040     F2837xD_GlobalVariableDefs.obj (OutputXbarRegsFile)
+
+GpioCtrlRegsFile 
+*          1    00007c00    00000180     UNINITIALIZED
+                  00007c00    00000180     F2837xD_GlobalVariableDefs.obj (GpioCtrlRegsFile)
+
+GpioDataRegsFile 
+*          1    00007f00    00000030     UNINITIALIZED
+                  00007f00    00000030     F2837xD_GlobalVariableDefs.obj (GpioDataRegsFile)
+
+Emif1RegsFile 
+*          1    00047000    00000058     UNINITIALIZED
+                  00047000    00000058     F2837xD_GlobalVariableDefs.obj (Emif1RegsFile)
+
+Emif2RegsFile 
+*          1    00047800    00000058     UNINITIALIZED
+                  00047800    00000058     F2837xD_GlobalVariableDefs.obj (Emif2RegsFile)
+
+CanaRegsFile 
+*          1    00048000    00000162     UNINITIALIZED
+                  00048000    00000162     F2837xD_GlobalVariableDefs.obj (CanaRegsFile)
+
+CanbRegsFile 
+*          1    0004a000    00000162     UNINITIALIZED
+                  0004a000    00000162     F2837xD_GlobalVariableDefs.obj (CanbRegsFile)
+
+IpcRegsFile 
+*          1    00050000    00000026     UNINITIALIZED
+                  00050000    00000026     F2837xD_GlobalVariableDefs.obj (IpcRegsFile)
+
+HwbistRegsFile 
+*          1    0005e000    000000a2     UNINITIALIZED
+                  0005e000    000000a2     F2837xD_GlobalVariableDefs.obj (HwbistRegsFile)
+
+PbistRegsFile 
+*          1    0005e200    000001e6     UNINITIALIZED
+                  0005e200    000001e6     F2837xD_GlobalVariableDefs.obj (PbistRegsFile)
+
+RomPrefetchRegsFile 
+*          1    0005e608    00000002     UNINITIALIZED
+                  0005e608    00000002     F2837xD_GlobalVariableDefs.obj (RomPrefetchRegsFile)
+
+DcsmZ1RegsFile 
+*          1    0005f000    00000022     UNINITIALIZED
+                  0005f000    00000022     F2837xD_GlobalVariableDefs.obj (DcsmZ1RegsFile)
+
+DcsmZ2RegsFile 
+*          1    0005f040    00000022     UNINITIALIZED
+                  0005f040    00000022     F2837xD_GlobalVariableDefs.obj (DcsmZ2RegsFile)
+
+DcsmCommonRegsFile 
+*          1    0005f070    00000006     UNINITIALIZED
+                  0005f070    00000006     F2837xD_GlobalVariableDefs.obj (DcsmCommonRegsFile)
+
+MemCfgRegsFile 
+*          1    0005f400    00000076     UNINITIALIZED
+                  0005f400    00000076     F2837xD_GlobalVariableDefs.obj (MemCfgRegsFile)
+
+Emif1ConfigRegsFile 
+*          1    0005f480    0000000a     UNINITIALIZED
+                  0005f480    0000000a     F2837xD_GlobalVariableDefs.obj (Emif1ConfigRegsFile)
+
+Emif2ConfigRegsFile 
+*          1    0005f4a0    0000000a     UNINITIALIZED
+                  0005f4a0    0000000a     F2837xD_GlobalVariableDefs.obj (Emif2ConfigRegsFile)
+
+AccessProtectionRegsFile 
+*          1    0005f4c0    0000002e     UNINITIALIZED
+                  0005f4c0    0000002e     F2837xD_GlobalVariableDefs.obj (AccessProtectionRegsFile)
+
+MemoryErrorRegsFile 
+*          1    0005f500    0000003a     UNINITIALIZED
+                  0005f500    0000003a     F2837xD_GlobalVariableDefs.obj (MemoryErrorRegsFile)
+
+RomWaitStateRegsFile 
+*          1    0005f540    00000002     UNINITIALIZED
+                  0005f540    00000002     F2837xD_GlobalVariableDefs.obj (RomWaitStateRegsFile)
+
+Flash0CtrlRegsFile 
+*          1    0005f800    00000182     UNINITIALIZED
+                  0005f800    00000182     F2837xD_GlobalVariableDefs.obj (Flash0CtrlRegsFile)
+
+Flash0EccRegsFile 
+*          1    0005fb00    00000028     UNINITIALIZED
+                  0005fb00    00000028     F2837xD_GlobalVariableDefs.obj (Flash0EccRegsFile)
+
+DcsmZ1OtpFile 
+*          1    00078000    0000001a     UNINITIALIZED
+                  00078000    0000001a     F2837xD_GlobalVariableDefs.obj (DcsmZ1OtpFile)
+
+DcsmZ2OtpFile 
+*          1    00078200    0000001a     UNINITIALIZED
+                  00078200    0000001a     F2837xD_GlobalVariableDefs.obj (DcsmZ2OtpFile)
+
+DevCfgRegsFile 
+*          1    0005d000    00000126     UNINITIALIZED
+                  0005d000    00000126     F2837xD_GlobalVariableDefs.obj (DevCfgRegsFile)
+
+ClkCfgRegsFile 
+*          1    0005d200    00000032     UNINITIALIZED
+                  0005d200    00000032     F2837xD_GlobalVariableDefs.obj (ClkCfgRegsFile)
+
+CpuSysRegsFile 
+*          1    0005d300    00000082     UNINITIALIZED
+                  0005d300    00000082     F2837xD_GlobalVariableDefs.obj (CpuSysRegsFile)
+
+.text.1    0    00000126    000002d9     
+                  00000126    00000280     F2837xD_SysCtrl.obj (.text)
+                  000003a6    00000056     rts2800_fpu32.lib : boot28.asm.obj (.text)
+                  000003fc    00000002                       : pre_init.c.obj (.text)
+                  000003fe    00000001                       : startup.c.obj (.text)
+
+.text.2    0    0000c000    00001000     
+                  0000c000    0000058f     F2837xD_DefaultISR.obj (.text:retain)
+                  0000c58f    0000054f     FuncoesGerais.obj (.text)
+                  0000cade    0000036b     InicializacaoFuncoes.obj (.text)
+                  0000ce49    000000fd     F2837xD_EPwm.obj (.text)
+                  0000cf46    00000096     F2837xD_EQep.obj (.text)
+                  0000cfdc    00000024     rts2800_fpu32.lib : cpy_tbl.c.obj (.text)
+
+.text.3    0    0000d000    00000756     
+                  0000d000    000002df     Interrupcoes.obj (.text:retain)
+                  0000d2df    00000244     F2837xD_Gpio.obj (.text)
+                  0000d523    00000088     rts2800_fpu32.lib : fs_div28.asm.obj (.text)
+                  0000d5ab    00000083                       : fd_mpy28.asm.obj (.text)
+                  0000d62e    00000029                       : exit.c.obj (.text)
+                  0000d657    00000028     F2837xD_PieCtrl.obj (.text)
+                  0000d67f    00000026     F2837xD_PieVect.obj (.text)
+                  0000d6a5    00000023     rts2800_fpu32.lib : fd_tofsfpu32.asm.obj (.text)
+                  0000d6c8    0000001d                       : memcpy.c.obj (.text)
+                  0000d6e5    0000001c                       : fs_tofdfpu32.asm.obj (.text)
+                  0000d701    00000018                       : ll_aox28.asm.obj (.text)
+                  0000d719    00000013     main.obj (.text)
+                  0000d72c    00000012     rts2800_fpu32.lib : args_main.c.obj (.text)
+                  0000d73e    00000009                       : _lock.c.obj (.text)
+                  0000d747    00000008     F2837xD_CodeStartBranch.obj (.text)
+                  0000d74f    00000007     rts2800_fpu32.lib : memset.c.obj (.text)
+
+.ebss.1    1    0000a9c4    0000000a     UNINITIALIZED
+                  0000a9c4    00000006     rts2800_fpu32.lib : exit.c.obj (.ebss)
+                  0000a9ca    00000002                       : _lock.c.obj (.ebss:__lock)
+                  0000a9cc    00000002                       : _lock.c.obj (.ebss:__unlock)
+
+.ebss.2    1    0000aa00    000000b0     UNINITIALIZED
+                  0000aa00    000000b0     main.obj (.ebss)
+
+.ebss.3    1    0000e000    00007530     UNINITIALIZED
+                  0000e000    00007530     main.obj (.ebss:_buffer_MSTel)
+
+.ebss.4    1    00015540    00001d4c     UNINITIALIZED
+                  00015540    00001d4c     main.obj (.ebss:_buffer_wmec)
+
+MODULE SUMMARY
+
+       Module                           code   initialized data   uninitialized data
+       ------                           ----   ----------------   ------------------
+    .\
+       main.obj                         19     470                37676             
+       FuncoesGerais.obj                1359   4                  0                 
+       InicializacaoFuncoes.obj         875    0                  0                 
+       Interrupcoes.obj                 735    0                  0                 
+    +--+--------------------------------+------+------------------+--------------------+
+       Total:                           2988   474                37676             
+                                                                                    
+    .\Complementos\
+       F2837xD_GlobalVariableDefs.obj   0      0                  8507              
+       F2837xD_DefaultISR.obj           1423   0                  0                 
+       F2837xD_SysCtrl.obj              640    0                  0                 
+       F2837xD_Gpio.obj                 580    0                  0                 
+       F2837xD_PieVect.obj              38     448                0                 
+       F2837xD_EPwm.obj                 253    0                  0                 
+       F2837xD_EQep.obj                 150    0                  0                 
+       F2837xD_PieCtrl.obj              40     0                  0                 
+       F2837xD_CodeStartBranch.obj      10     0                  0                 
+       F2837xD_usDelay.obj              4      0                  0                 
+    +--+--------------------------------+------+------------------+--------------------+
+       Total:                           3138   448                8507              
+                                                                                    
+    C:\ti\ccs1260\ccs\tools\compiler\ti-cgt-c2000_22.6.1.LTS\lib\rts2800_fpu32.lib
+       fs_div28.asm.obj                 136    0                  0                 
+       fd_mpy28.asm.obj                 131    0                  0                 
+       boot28.asm.obj                   86     0                  0                 
+       exit.c.obj                       41     14                 6                 
+       cpy_tbl.c.obj                    36     0                  0                 
+       fd_tofsfpu32.asm.obj             35     0                  0                 
+       memcpy.c.obj                     29     0                  0                 
+       fs_tofdfpu32.asm.obj             28     0                  0                 
+       ll_aox28.asm.obj                 24     0                  0                 
+       _lock.c.obj                      9      10                 4                 
+       args_main.c.obj                  18     0                  0                 
+       memset.c.obj                     7      0                  0                 
+       pre_init.c.obj                   2      0                  0                 
+       startup.c.obj                    1      0                  0                 
+    +--+--------------------------------+------+------------------+--------------------+
+       Total:                           583    24                 10                
+                                                                                    
+       Stack:                           0      0                  512               
+    +--+--------------------------------+------+------------------+--------------------+
+       Grand Total:                     6709   946                46705             
+
+
+GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
+
+address     data page           name
+--------    ----------------    ----
+00000400      10 (00000400)     __stack
+
+00000b00      2c (00000b00)     _AdcaResultRegs
+00000b20      2c (00000b00)     _AdcbResultRegs
+
+00000b40      2d (00000b40)     _AdccResultRegs
+00000b60      2d (00000b40)     _AdcdResultRegs
+
+00000c00      30 (00000c00)     _CpuTimer0Regs
+00000c08      30 (00000c00)     _CpuTimer1Regs
+00000c10      30 (00000c00)     _CpuTimer2Regs
+
+00000ce0      33 (00000cc0)     _Cla1SoftIntRegs
+00000ce0      33 (00000cc0)     _PieCtrlRegs
+
+00000d00      34 (00000d00)     _EmuKey
+00000d00      34 (00000d00)     _PieVectTable
+00000d01      34 (00000d00)     _EmuBMode
+
+00001000      40 (00001000)     _DmaRegs
+
+00001400      50 (00001400)     _Cla1Regs
+
+00004000     100 (00004000)     _EPwm1Regs
+
+00004100     104 (00004100)     _EPwm2Regs
+
+00004200     108 (00004200)     _EPwm3Regs
+
+00004300     10c (00004300)     _EPwm4Regs
+
+00004400     110 (00004400)     _EPwm5Regs
+
+00004500     114 (00004500)     _EPwm6Regs
+
+00004600     118 (00004600)     _EPwm7Regs
+
+00004700     11c (00004700)     _EPwm8Regs
+
+00004800     120 (00004800)     _EPwm9Regs
+
+00004900     124 (00004900)     _EPwm10Regs
+
+00004a00     128 (00004a00)     _EPwm11Regs
+
+00004b00     12c (00004b00)     _EPwm12Regs
+
+00005000     140 (00005000)     _ECap1Regs
+00005020     140 (00005000)     _ECap2Regs
+
+00005040     141 (00005040)     _ECap3Regs
+00005060     141 (00005040)     _ECap4Regs
+
+00005080     142 (00005080)     _ECap5Regs
+000050a0     142 (00005080)     _ECap6Regs
+
+00005100     144 (00005100)     _EQep1Regs
+
+00005140     145 (00005140)     _EQep2Regs
+
+00005180     146 (00005180)     _EQep3Regs
+
+00005c00     170 (00005c00)     _DacaRegs
+00005c10     170 (00005c00)     _DacbRegs
+00005c20     170 (00005c00)     _DaccRegs
+
+00005c80     172 (00005c80)     _Cmpss1Regs
+00005ca0     172 (00005c80)     _Cmpss2Regs
+
+00005cc0     173 (00005cc0)     _Cmpss3Regs
+00005ce0     173 (00005cc0)     _Cmpss4Regs
+
+00005d00     174 (00005d00)     _Cmpss5Regs
+00005d20     174 (00005d00)     _Cmpss6Regs
+
+00005d40     175 (00005d40)     _Cmpss7Regs
+00005d60     175 (00005d40)     _Cmpss8Regs
+
+00005e00     178 (00005e00)     _Sdfm1Regs
+
+00005e80     17a (00005e80)     _Sdfm2Regs
+
+00006000     180 (00006000)     _McbspaRegs
+
+00006040     181 (00006040)     _McbspbRegs
+
+00006100     184 (00006100)     _SpiaRegs
+00006110     184 (00006100)     _SpibRegs
+00006120     184 (00006100)     _SpicRegs
+
+00006200     188 (00006200)     _UppRegs
+
+00007000     1c0 (00007000)     _WdRegs
+
+00007060     1c1 (00007040)     _NmiIntruptRegs
+00007070     1c1 (00007040)     _XintRegs
+
+00007200     1c8 (00007200)     _SciaRegs
+00007210     1c8 (00007200)     _ScibRegs
+00007220     1c8 (00007200)     _ScicRegs
+00007230     1c8 (00007200)     _ScidRegs
+
+00007300     1cc (00007300)     _I2caRegs
+
+00007340     1cd (00007340)     _I2cbRegs
+
+00007400     1d0 (00007400)     _AdcaRegs
+
+00007480     1d2 (00007480)     _AdcbRegs
+
+00007500     1d4 (00007500)     _AdccRegs
+
+00007580     1d6 (00007580)     _AdcdRegs
+
+00007900     1e4 (00007900)     _InputXbarRegs
+
+00007940     1e5 (00007940)     _TrigRegs
+
+00007980     1e6 (00007980)     _DmaClaSrcSelRegs
+
+00007a00     1e8 (00007a00)     _EPwmXbarRegs
+
+00007a80     1ea (00007a80)     _OutputXbarRegs
+
+00007c00     1f0 (00007c00)     _GpioCtrlRegs
+
+00007f00     1fc (00007f00)     _GpioDataRegs
+
+0000a800     2a0 (0000a800)     _PieVectTableInit
+
+0000a9c4     2a7 (0000a9c0)     ___TI_enable_exit_profile_output
+0000a9c6     2a7 (0000a9c0)     ___TI_cleanup_ptr
+0000a9c8     2a7 (0000a9c0)     ___TI_dtors_ptr
+0000a9ca     2a7 (0000a9c0)     __lock
+0000a9cc     2a7 (0000a9c0)     __unlock
+
+0000aa00     2a8 (0000aa00)     _Waitflux
+0000aa01     2a8 (0000aa00)     _hab_aquisicao
+0000aa02     2a8 (0000aa00)     _flag_aquisicao
+0000aa03     2a8 (0000aa00)     _flag_emulacao
+0000aa04     2a8 (0000aa00)     _intDelta_Tel
+0000aa05     2a8 (0000aa00)     _intMITel
+0000aa06     2a8 (0000aa00)     _cont_buffwmec
+0000aa07     2a8 (0000aa00)     _indexbufwmec
+0000aa08     2a8 (0000aa00)     _cont_buffMSTel
+0000aa09     2a8 (0000aa00)     _indexbufMSTel
+0000aa0a     2a8 (0000aa00)     _inverso
+0000aa0b     2a8 (0000aa00)     _direcao
+0000aa0c     2a8 (0000aa00)     _LoopctrlVel
+0000aa0d     2a8 (0000aa00)     _Loopctrl
+0000aa0e     2a8 (0000aa00)     _LoopVel
+0000aa0f     2a8 (0000aa00)     _intang_encoder
+0000aa10     2a8 (0000aa00)     _TempoOffset
+0000aa11     2a8 (0000aa00)     _TempoOffset_fino
+0000aa12     2a8 (0000aa00)     _MITel_Sentido
+0000aa13     2a8 (0000aa00)     _flag_MSTel_Zero
+0000aa14     2a8 (0000aa00)     _contstep
+0000aa16     2a8 (0000aa00)     _Tel_ref0
+0000aa18     2a8 (0000aa00)     _ang_encoder_ant
+0000aa1a     2a8 (0000aa00)     _difang_encoder
+0000aa1c     2a8 (0000aa00)     _angulo_encoder
+0000aa1e     2a8 (0000aa00)     _angulo_encoder0
+0000aa20     2a8 (0000aa00)     _filtangulo_encoder
+0000aa22     2a8 (0000aa00)     _NumPulsos
+0000aa24     2a8 (0000aa00)     _ang_encoder
+0000aa26     2a8 (0000aa00)     _ang_encoder0
+0000aa28     2a8 (0000aa00)     _wmec
+0000aa2a     2a8 (0000aa00)     _wm
+0000aa2c     2a8 (0000aa00)     _MSTel
+0000aa2e     2a8 (0000aa00)     _Delta_Tel
+0000aa30     2a8 (0000aa00)     _MITel
+0000aa32     2a8 (0000aa00)     _MITelf0
+0000aa34     2a8 (0000aa00)     _Delta_Telf0
+0000aa36     2a8 (0000aa00)     _MITel_offset
+0000aa38     2a8 (0000aa00)     _Delta_Tel_offset
+0000aa3a     2a8 (0000aa00)     _MITel_offpass0
+0000aa3c     2a8 (0000aa00)     _Delta_Tel_offpass0
+0000aa3e     2a8 (0000aa00)     _Delta_Tel0
+
+0000aa40     2a9 (0000aa40)     _Delta_Tel00
+0000aa42     2a9 (0000aa40)     _Delta_Tel000
+0000aa44     2a9 (0000aa40)     _MITel0
+0000aa46     2a9 (0000aa40)     _MITel00
+0000aa48     2a9 (0000aa40)     _MITel000
+0000aa4a     2a9 (0000aa40)     _abs_Delta_Tel
+0000aa4c     2a9 (0000aa40)     _abs_MITel
+0000aa4e     2a9 (0000aa40)     _abs_MSTel
+0000aa50     2a9 (0000aa40)     _k_torqu
+0000aa52     2a9 (0000aa40)     _k_Bem
+0000aa54     2a9 (0000aa40)     _Delta_Tel_antigo
+0000aa56     2a9 (0000aa40)     _sinal_Delta_Tel
+0000aa58     2a9 (0000aa40)     _sinal_Delta_Tel_antigo
+0000aa5a     2a9 (0000aa40)     _hister_delta
+0000aa5c     2a9 (0000aa40)     _Delta_Tel_f2
+0000aa5e     2a9 (0000aa40)     _Delta_Tel_f20
+0000aa60     2a9 (0000aa40)     _wmecRef
+0000aa62     2a9 (0000aa40)     _MITel_Ref
+0000aa64     2a9 (0000aa40)     _MITel_Ref0
+0000aa66     2a9 (0000aa40)     _wmecEm
+0000aa68     2a9 (0000aa40)     _wmecEm0
+0000aa6a     2a9 (0000aa40)     _wmecEm_RPM
+0000aa6c     2a9 (0000aa40)     _Bem
+0000aa6e     2a9 (0000aa40)     _Jem
+0000aa70     2a9 (0000aa40)     _Tf
+0000aa72     2a9 (0000aa40)     _erro_wmecEm0
+0000aa74     2a9 (0000aa40)     _wmecEm_Ref
+0000aa76     2a9 (0000aa40)     _wmecEm_Ref0
+0000aa78     2a9 (0000aa40)     _SaidaInv_AI1
+0000aa7a     2a9 (0000aa40)     _test_ad
+0000aa7c     2a9 (0000aa40)     _Kp
+0000aa7e     2a9 (0000aa40)     _Ki
+
+0000aa80     2aa (0000aa80)     _patamar
+0000aa82     2aa (0000aa80)     _derivf_ant
+0000aa84     2aa (0000aa80)     _novo_p_ant
+0000aa86     2aa (0000aa80)     _filtrado_anterior
+0000aa88     2aa (0000aa80)     _filt_a
+0000aa8a     2aa (0000aa80)     _filt_b
+0000aa8c     2aa (0000aa80)     _filt_a3
+0000aa8e     2aa (0000aa80)     _filt_b3
+0000aa90     2aa (0000aa80)     _filt_a2
+0000aa92     2aa (0000aa80)     _filt_b2
+0000aa94     2aa (0000aa80)     _sample_rate_filt
+0000aa96     2aa (0000aa80)     _cutoff_frequency
+0000aa98     2aa (0000aa80)     _cutoff_frequency2
+0000aa9a     2aa (0000aa80)     _cutoff_frequency3
+0000aa9c     2aa (0000aa80)     _dt_filt
+0000aa9e     2aa (0000aa80)     _w_c_filt
+0000aaa0     2aa (0000aa80)     _tau_filt
+0000aaa2     2aa (0000aa80)     _novo_p2
+0000aaa4     2aa (0000aa80)     _DeltaTel_anterior
+0000aaa6     2aa (0000aa80)     _DetltaTelDeriv_ant
+0000aaa8     2aa (0000aa80)     _DeltaTelIntgrado_ant
+0000aaaa     2aa (0000aa80)     _MITel_anterior
+0000aaac     2aa (0000aa80)     _MITelDeriv_ant
+0000aaae     2aa (0000aa80)     _MITelIntgrado_ant
+
+0000e000     380 (0000e000)     _buffer_MSTel
+
+00015540     555 (00015540)     _buffer_wmec
+
+00047000    11c0 (00047000)     _Emif1Regs
+
+00047800    11e0 (00047800)     _Emif2Regs
+
+00048000    1200 (00048000)     _CanaRegs
+
+0004a000    1280 (0004a000)     _CanbRegs
+
+00050000    1400 (00050000)     _IpcRegs
+
+0005d000    1740 (0005d000)     _DevCfgRegs
+
+0005d180    1746 (0005d180)     _AnalogSubsysRegs
+
+0005d200    1748 (0005d200)     _ClkCfgRegs
+
+0005d300    174c (0005d300)     _CpuSysRegs
+
+0005e000    1780 (0005e000)     _HwbistRegs
+
+0005e200    1788 (0005e200)     _PbistRegs
+
+0005e608    1798 (0005e600)     _RomPrefetchRegs
+
+0005f000    17c0 (0005f000)     _DcsmZ1Regs
+
+0005f040    17c1 (0005f040)     _DcsmZ2Regs
+0005f070    17c1 (0005f040)     _DcsmCommonRegs
+
+0005f400    17d0 (0005f400)     _MemCfgRegs
+
+0005f480    17d2 (0005f480)     _Emif1ConfigRegs
+0005f4a0    17d2 (0005f480)     _Emif2ConfigRegs
+
+0005f4c0    17d3 (0005f4c0)     _AccessProtectionRegs
+
+0005f500    17d4 (0005f500)     _MemoryErrorRegs
+
+0005f540    17d5 (0005f540)     _RomWaitStateRegs
+
+0005f800    17e0 (0005f800)     _Flash0CtrlRegs
+
+0005fb00    17ec (0005fb00)     _Flash0EccRegs
+
+00078000    1e00 (00078000)     _DcsmZ1Otp
+
+00078200    1e08 (00078200)     _DcsmZ2Otp
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+page  address   name                                  
+----  -------   ----                                  
+abs   ffffffff  .text                                 
+0     0000d62e  C$$EXIT                               
+0     0000d5ab  FD$$MPY                               
+0     0000d6a5  FD$$TOFS                              
+0     0000d523  FS$$DIV                               
+0     0000d6e5  FS$$TOFD                              
+0     0000d701  LL$$AND                               
+0     0000d709  LL$$OR                                
+0     0000d711  LL$$XOR                               
+0     0000c0be  _ADCA1_ISR                            
+0     0000c33e  _ADCA2_ISR                            
+0     0000c348  _ADCA3_ISR                            
+0     0000c352  _ADCA4_ISR                            
+0     0000c334  _ADCA_EVT_ISR                         
+0     0000c0c8  _ADCB1_ISR                            
+0     0000c366  _ADCB2_ISR                            
+0     0000c370  _ADCB3_ISR                            
+0     0000c37a  _ADCB4_ISR                            
+0     0000c35c  _ADCB_EVT_ISR                         
+0     0000c0d2  _ADCC1_ISR                            
+0     0000c4d8  _ADCC2_ISR                            
+0     0000c4e2  _ADCC3_ISR                            
+0     0000c4ec  _ADCC4_ISR                            
+0     0000c4ce  _ADCC_EVT_ISR                         
+0     0000c0f0  _ADCD1_ISR                            
+0     0000c500  _ADCD2_ISR                            
+0     0000c50a  _ADCD3_ISR                            
+0     0000c514  _ADCD4_ISR                            
+0     0000c4f6  _ADCD_EVT_ISR                         
+0     0000c550  _AUX_PLL_SLIP_ISR                     
+1     0005f4c0  _AccessProtectionRegs                 
+1     00007400  _AdcaRegs                             
+1     00000b00  _AdcaResultRegs                       
+1     00007480  _AdcbRegs                             
+1     00000b20  _AdcbResultRegs                       
+1     00007500  _AdccRegs                             
+1     00000b40  _AdccResultRegs                       
+1     00007580  _AdcdRegs                             
+1     00000b60  _AdcdResultRegs                       
+1     0005d180  _AnalogSubsysRegs                     
+0     00000366  _AuxAuxClkSel                         
+0     00000350  _AuxIntOsc2Sel                        
+0     0000035a  _AuxXtalOscSel                        
+1     0000aa6c  _Bem                                  
+0     0000c384  _CLA1_1_ISR                           
+0     0000c38e  _CLA1_2_ISR                           
+0     0000c398  _CLA1_3_ISR                           
+0     0000c3a2  _CLA1_4_ISR                           
+0     0000c3ac  _CLA1_5_ISR                           
+0     0000c3b6  _CLA1_6_ISR                           
+0     0000c3c0  _CLA1_7_ISR                           
+0     0000c3ca  _CLA1_8_ISR                           
+0     0000c55a  _CLA_OVERFLOW_ISR                     
+0     0000c564  _CLA_UNDERFLOW_ISR                    
+1     00048000  _CanaRegs                             
+1     0004a000  _CanbRegs                             
+1     00001400  _Cla1Regs                             
+0     00000ce0  _Cla1SoftIntRegs                      
+1     0005d200  _ClkCfgRegs                           
+1     00005c80  _Cmpss1Regs                           
+1     00005ca0  _Cmpss2Regs                           
+1     00005cc0  _Cmpss3Regs                           
+1     00005ce0  _Cmpss4Regs                           
+1     00005d00  _Cmpss5Regs                           
+1     00005d20  _Cmpss6Regs                           
+1     00005d40  _Cmpss7Regs                           
+1     00005d60  _Cmpss8Regs                           
+0     0000cb70  _ConfigureADC                         
+0     0000cc31  _ConfigureDAC                         
+1     0005d300  _CpuSysRegs                           
+1     00000c00  _CpuTimer0Regs                        
+1     00000c08  _CpuTimer1Regs                        
+1     00000c10  _CpuTimer2Regs                        
+0     0000030f  _CsmUnlock                            
+0     0000c014  _DATALOG_ISR                          
+0     0000c30c  _DCANA_1_ISR                          
+0     0000c316  _DCANA_2_ISR                          
+0     0000c320  _DCANB_1_ISR                          
+0     0000c32a  _DCANB_2_ISR                          
+0     0000c258  _DMA_CH1_ISR                          
+0     0000c262  _DMA_CH2_ISR                          
+0     0000c26c  _DMA_CH3_ISR                          
+0     0000c276  _DMA_CH4_ISR                          
+0     0000c280  _DMA_CH5_ISR                          
+0     0000c28a  _DMA_CH6_ISR                          
+1     00005c00  _DacaRegs                             
+1     00005c10  _DacbRegs                             
+1     00005c20  _DaccRegs                             
+1     0005f070  _DcsmCommonRegs                       
+1     00078000  _DcsmZ1Otp                            
+1     0005f000  _DcsmZ1Regs                           
+1     00078200  _DcsmZ2Otp                            
+1     0005f040  _DcsmZ2Regs                           
+1     0000aaa8  _DeltaTelIntgrado_ant                 
+1     0000aaa4  _DeltaTel_anterior                    
+1     0000aa2e  _Delta_Tel                            
+1     0000aa3e  _Delta_Tel0                           
+1     0000aa40  _Delta_Tel00                          
+1     0000aa42  _Delta_Tel000                         
+1     0000aa54  _Delta_Tel_antigo                     
+1     0000aa5c  _Delta_Tel_f2                         
+1     0000aa5e  _Delta_Tel_f20                        
+1     0000aa3c  _Delta_Tel_offpass0                   
+1     0000aa38  _Delta_Tel_offset                     
+1     0000aa34  _Delta_Telf0                          
+1     0000aaa6  _DetltaTelDeriv_ant                   
+1     0005d000  _DevCfgRegs                           
+0     000001e9  _DisableDog                           
+1     00007980  _DmaClaSrcSelRegs                     
+1     00001000  _DmaRegs                              
+0     0000c1ae  _ECAP1_ISR                            
+0     0000c1b8  _ECAP2_ISR                            
+0     0000c1c2  _ECAP3_ISR                            
+0     0000c1cc  _ECAP4_ISR                            
+0     0000c1d6  _ECAP5_ISR                            
+0     0000c1e0  _ECAP6_ISR                            
+1     00005000  _ECap1Regs                            
+1     00005020  _ECap2Regs                            
+1     00005040  _ECap3Regs                            
+1     00005060  _ECap4Regs                            
+1     00005080  _ECap5Regs                            
+1     000050a0  _ECap6Regs                            
+0     0000c51e  _EMIF_ERROR_ISR                       
+0     0000c578  _EMPTY_ISR                            
+0     0000c028  _EMU_ISR                              
+0     0000c474  _EPWM10_ISR                           
+0     0000c44c  _EPWM10_TZ_ISR                        
+0     0000c47e  _EPWM11_ISR                           
+0     0000c456  _EPWM11_TZ_ISR                        
+0     0000c488  _EPWM12_ISR                           
+0     0000c460  _EPWM12_TZ_ISR                        
+0     0000c15e  _EPWM1_ISR                            
+0     0000c10e  _EPWM1_TZ_ISR                         
+0     0000c168  _EPWM2_ISR                            
+0     0000c118  _EPWM2_TZ_ISR                         
+0     0000c172  _EPWM3_ISR                            
+0     0000c122  _EPWM3_TZ_ISR                         
+0     0000c17c  _EPWM4_ISR                            
+0     0000c12c  _EPWM4_TZ_ISR                         
+0     0000c186  _EPWM5_ISR                            
+0     0000c136  _EPWM5_TZ_ISR                         
+0     0000c190  _EPWM6_ISR                            
+0     0000c140  _EPWM6_TZ_ISR                         
+0     0000c19a  _EPWM7_ISR                            
+0     0000c14a  _EPWM7_TZ_ISR                         
+0     0000c1a4  _EPWM8_ISR                            
+0     0000c154  _EPWM8_TZ_ISR                         
+0     0000c46a  _EPWM9_ISR                            
+0     0000c442  _EPWM9_TZ_ISR                         
+1     00004900  _EPwm10Regs                           
+1     00004a00  _EPwm11Regs                           
+1     00004b00  _EPwm12Regs                           
+1     00004000  _EPwm1Regs                            
+1     00004100  _EPwm2Regs                            
+1     00004200  _EPwm3Regs                            
+1     00004300  _EPwm4Regs                            
+1     00004400  _EPwm5Regs                            
+1     00004500  _EPwm6Regs                            
+1     00004600  _EPwm7Regs                            
+1     00004700  _EPwm8Regs                            
+1     00004800  _EPwm9Regs                            
+1     00007a00  _EPwmXbarRegs                         
+0     0000c1ea  _EQEP1_ISR                            
+0     0000c1f4  _EQEP2_ISR                            
+0     0000c1fe  _EQEP3_ISR                            
+1     00005100  _EQep1Regs                            
+1     00005140  _EQep2Regs                            
+1     00005180  _EQep3Regs                            
+1     0005f480  _Emif1ConfigRegs                      
+1     00047000  _Emif1Regs                            
+1     0005f4a0  _Emif2ConfigRegs                      
+1     00047800  _Emif2Regs                            
+1     00000d01  _EmuBMode                             
+1     00000d00  _EmuKey                               
+0     0000d676  _EnableInterrupts                     
+0     00000122  _F28x_usDelay                         
+0     0000c532  _FLASH_CORRECTABLE_ERROR_ISR          
+0     0000c406  _FPU_OVERFLOW_ISR                     
+0     0000c410  _FPU_UNDERFLOW_ISR                    
+0     0000c613  _Filt_bessel                          
+1     0005f800  _Flash0CtrlRegs                       
+1     0005fb00  _Flash0EccRegs                        
+0     0000d4d8  _GPIO_EnableUnbondedIOPullups         
+0     0000d4b3  _GPIO_EnableUnbondedIOPullupsFor100Pin
+0     0000d49a  _GPIO_EnableUnbondedIOPullupsFor176Pin
+0     0000d4ee  _GPIO_ReadPin                         
+0     0000d43f  _GPIO_SetupLock                       
+0     0000d31f  _GPIO_SetupPinMux                     
+0     0000d3ab  _GPIO_SetupPinOptions                 
+0     0000d468  _GPIO_SetupXINT1Gpio                  
+0     0000d472  _GPIO_SetupXINT2Gpio                  
+0     0000d47c  _GPIO_SetupXINT3Gpio                  
+0     0000d486  _GPIO_SetupXINT4Gpio                  
+0     0000d490  _GPIO_SetupXINT5Gpio                  
+0     0000d505  _GPIO_WritePin                        
+1     00007c00  _GpioCtrlRegs                         
+1     00007f00  _GpioDataRegs                         
+0     00000384  _HALT                                 
+0     00000394  _HIB                                  
+1     0005e000  _HwbistRegs                           
+0     0000c29e  _I2CA_FIFO_ISR                        
+0     0000c294  _I2CA_ISR                             
+0     0000c2b2  _I2CB_FIFO_ISR                        
+0     0000c2a8  _I2CB_ISR                             
+1     00007300  _I2caRegs                             
+1     00007340  _I2cbRegs                             
+0     00000370  _IDLE                                 
+0     0000c03c  _ILLEGAL_ISR                          
+0     0000c41a  _IPC0_ISR                             
+0     0000c424  _IPC1_ISR                             
+0     0000c42e  _IPC2_ISR                             
+0     0000c438  _IPC3_ISR                             
+0     0000cade  _Inicializacao                        
+0     0000028a  _InitAuxPll                           
+0     0000cc49  _InitEPwm1                            
+0     0000cf0c  _InitEPwm10Gpio                       
+0     0000cf1f  _InitEPwm11Gpio                       
+0     0000cf33  _InitEPwm12Gpio                       
+0     0000ce62  _InitEPwm1Gpio                        
+0     0000cc8e  _InitEPwm2                            
+0     0000ce74  _InitEPwm2Gpio                        
+0     0000ccb7  _InitEPwm3                            
+0     0000ce86  _InitEPwm3Gpio                        
+0     0000ccfa  _InitEPwm4                            
+0     0000ce9a  _InitEPwm4Gpio                        
+0     0000cd3d  _InitEPwm5                            
+0     0000ceae  _InitEPwm5Gpio                        
+0     0000cd80  _InitEPwm6                            
+0     0000cec0  _InitEPwm6Gpio                        
+0     0000cdc3  _InitEPwm7                            
+0     0000ced2  _InitEPwm7Gpio                        
+0     0000ce06  _InitEPwm8                            
+0     0000cee6  _InitEPwm8Gpio                        
+0     0000cefa  _InitEPwm9Gpio                        
+0     0000ce49  _InitEPwmGpio                         
+0     0000cf46  _InitEQep                             
+0     0000cc08  _InitEQep1                            
+0     0000cf4e  _InitEQep1Gpio                        
+0     0000cf78  _InitEQep2Gpio                        
+0     0000cf9e  _InitEQep3Gpio                        
+0     0000cf47  _InitEQepGpio                         
+0     0000d2df  _InitGpio                             
+0     00000157  _InitPeripheralClocks                 
+0     0000d657  _InitPieCtrl                          
+0     0000d67f  _InitPieVectTable                     
+0     00000126  _InitSysCtrl                          
+0     000001f7  _InitSysPll                           
+1     00007900  _InputXbarRegs                        
+1     00050000  _IpcRegs                              
+1     0000aa6e  _Jem                                  
+1     0000aa7e  _Ki                                   
+1     0000aa7c  _Kp                                   
+1     0000aa0e  _LoopVel                              
+1     0000aa0d  _Loopctrl                             
+1     0000aa0c  _LoopctrlVel                          
+0     0000c230  _MCBSPA_RX_ISR                        
+0     0000c23a  _MCBSPA_TX_ISR                        
+0     0000c244  _MCBSPB_RX_ISR                        
+0     0000c24e  _MCBSPB_TX_ISR                        
+1     0000aa30  _MITel                                
+1     0000aa44  _MITel0                               
+1     0000aa46  _MITel00                              
+1     0000aa48  _MITel000                             
+1     0000aaac  _MITelDeriv_ant                       
+1     0000aaae  _MITelIntgrado_ant                    
+1     0000aa62  _MITel_Ref                            
+1     0000aa64  _MITel_Ref0                           
+1     0000aa12  _MITel_Sentido                        
+1     0000aaaa  _MITel_anterior                       
+1     0000aa3a  _MITel_offpass0                       
+1     0000aa36  _MITel_offset                         
+1     0000aa32  _MITelf0                              
+1     0000aa2c  _MSTel                                
+1     00006000  _McbspaRegs                           
+1     00006040  _McbspbRegs                           
+1     0005f400  _MemCfgRegs                           
+1     0005f500  _MemoryErrorRegs                      
+0     0000c032  _NMI_ISR                              
+0     0000c585  _NOTUSED_ISR                          
+1     00007060  _NmiIntruptRegs                       
+1     0000aa22  _NumPulsos                            
+1     00007a80  _OutputXbarRegs                       
+0     0000c3f2  _PBIST_ISR                            
+0     0000c7d8  _PD                                   
+0     0000c840  _PI                                   
+0     0000c56e  _PIE_RESERVED_ISR                     
+1     0005e200  _PbistRegs                            
+1     00000ce0  _PieCtrlRegs                          
+1     00000d00  _PieVectTable                         
+1     0000a800  _PieVectTableInit                     
+0     0000c53c  _RAM_ACCESS_VIOLATION_ISR             
+0     0000c528  _RAM_CORRECTABLE_ERROR_ISR            
+0     0000c01e  _RTOS_ISR                             
+1     0005e608  _RomPrefetchRegs                      
+1     0005f540  _RomWaitStateRegs                     
+0     0000c2e4  _SCIA_RX_ISR                          
+0     0000c2ee  _SCIA_TX_ISR                          
+0     0000c2f8  _SCIB_RX_ISR                          
+0     0000c302  _SCIB_TX_ISR                          
+0     0000c2bc  _SCIC_RX_ISR                          
+0     0000c2c6  _SCIC_TX_ISR                          
+0     0000c2d0  _SCID_RX_ISR                          
+0     0000c2da  _SCID_TX_ISR                          
+0     0000c492  _SD1_ISR                              
+0     0000c49c  _SD2_ISR                              
+0     0000c208  _SPIA_RX_ISR                          
+0     0000c212  _SPIA_TX_ISR                          
+0     0000c21c  _SPIB_RX_ISR                          
+0     0000c226  _SPIB_TX_ISR                          
+0     0000c4a6  _SPIC_RX_ISR                          
+0     0000c4b0  _SPIC_TX_ISR                          
+0     00000379  _STANDBY                              
+0     0000c914  _SVPWM                                
+0     0000c546  _SYS_PLL_SLIP_ISR                     
+1     0000aa78  _SaidaInv_AI1                         
+1     00007200  _SciaRegs                             
+1     00007210  _ScibRegs                             
+1     00007220  _ScicRegs                             
+1     00007230  _ScidRegs                             
+1     00005e00  _Sdfm1Regs                            
+1     00005e80  _Sdfm2Regs                            
+0     000001db  _ServiceDog                           
+0     0000cb94  _SetupADCEpwm                         
+1     00006100  _SpiaRegs                             
+1     00006110  _SpibRegs                             
+1     00006120  _SpicRegs                             
+0     00000330  _SysIntOsc1Sel                        
+0     0000033a  _SysIntOsc2Sel                        
+0     00000344  _SysXtalOscSel                        
+0     0000c0fa  _TIMER0_ISR                           
+0     0000c000  _TIMER1_ISR                           
+0     0000c00a  _TIMER2_ISR                           
+0     0000c58f  _TORQ_REAL                            
+1     0000aa16  _Tel_ref0                             
+1     0000aa10  _TempoOffset                          
+1     0000aa11  _TempoOffset_fino                     
+1     0000aa70  _Tf                                   
+0     0000c89c  _Trf_AlfaBeta                         
+0     0000c8b8  _Trf_AlfaBeta_dq                      
+0     0000c8e7  _Trf_dq_AlfaBeta                      
+1     00007940  _TrigRegs                             
+0     0000c4ba  _UPPA_ISR                             
+0     0000c4c4  _USBA_ISR                             
+0     0000c0a0  _USER10_ISR                           
+0     0000c0aa  _USER11_ISR                           
+0     0000c0b4  _USER12_ISR                           
+0     0000c046  _USER1_ISR                            
+0     0000c050  _USER2_ISR                            
+0     0000c05a  _USER3_ISR                            
+0     0000c064  _USER4_ISR                            
+0     0000c06e  _USER5_ISR                            
+0     0000c078  _USER6_ISR                            
+0     0000c082  _USER7_ISR                            
+0     0000c08c  _USER8_ISR                            
+0     0000c096  _USER9_ISR                            
+1     00006200  _UppRegs                              
+0     0000c3fc  _VCU_ISR                              
+0     0000c104  _WAKE_ISR                             
+1     0000aa00  _Waitflux                             
+1     00007000  _WdRegs                               
+0     0000c0dc  _XINT1_ISR                            
+0     0000c0e6  _XINT2_ISR                            
+0     0000c3d4  _XINT3_ISR                            
+0     0000c3de  _XINT4_ISR                            
+0     0000c3e8  _XINT5_ISR                            
+1     00007070  _XintRegs                             
+1     00000600  __STACK_END                           
+abs   00000200  __STACK_SIZE                          
+1     0000a9c6  ___TI_cleanup_ptr                     
+1     0000a9c8  ___TI_dtors_ptr                       
+1     0000a9c4  ___TI_enable_exit_profile_output      
+abs   ffffffff  ___TI_pprof_out_hndl                  
+abs   ffffffff  ___TI_prof_data_size                  
+abs   ffffffff  ___TI_prof_data_start                 
+abs   ffffffff  ___binit__                            
+abs   ffffffff  ___c_args__                           
+0     00009800  ___cinit__                            
+abs   ffffffff  ___etext__                            
+abs   ffffffff  ___pinit__                            
+abs   ffffffff  ___text__                             
+0     0000d72c  __args_main                           
+1     0000a9ca  __lock                                
+0     0000d746  __nop                                 
+0     0000d742  __register_lock                       
+0     0000d73e  __register_unlock                     
+1     00000400  __stack                               
+0     000003fe  __system_post_cinit                   
+0     000003fc  __system_pre_init                     
+1     0000a9cc  __unlock                              
+0     0000d62e  _abort                                
+1     0000aa4a  _abs_Delta_Tel                        
+1     0000aa4c  _abs_MITel                            
+1     0000aa4e  _abs_MSTel                            
+0     0000d000  _adca1_isr                            
+1     0000aa24  _ang_encoder                          
+1     0000aa26  _ang_encoder0                         
+1     0000aa18  _ang_encoder_ant                      
+1     0000aa1c  _angulo_encoder                       
+1     0000aa1e  _angulo_encoder0                      
+0     0000ca9c  _aquisicaobuffer                      
+0     0000cabd  _aquisicaobuffer_unsigned             
+1     0000e000  _buffer_MSTel                         
+1     00015540  _buffer_wmec                          
+0     000003a6  _c_int00                              
+0     0000c68e  _calcula_bessel                       
+1     0000aa08  _cont_buffMSTel                       
+1     0000aa06  _cont_buffwmec                        
+1     0000aa14  _contstep                             
+0     0000cfdc  _copy_in                              
+1     0000aa96  _cutoff_frequency                     
+1     0000aa98  _cutoff_frequency2                    
+1     0000aa9a  _cutoff_frequency3                    
+1     0000aa82  _derivf_ant                           
+1     0000aa1a  _difang_encoder                       
+1     0000aa0b  _direcao                              
+1     0000aa9c  _dt_filt                              
+1     0000aa72  _erro_wmecEm0                         
+0     0000d630  _exit                                 
+1     0000aa88  _filt_a                               
+1     0000aa90  _filt_a2                              
+1     0000aa8c  _filt_a3                              
+1     0000aa8a  _filt_b                               
+1     0000aa92  _filt_b2                              
+1     0000aa8e  _filt_b3                              
+1     0000aa20  _filtangulo_encoder                   
+0     0000ca7f  _filtpbaixa                           
+1     0000aa86  _filtrado_anterior                    
+1     0000aa13  _flag_MSTel_Zero                      
+1     0000aa02  _flag_aquisicao                       
+1     0000aa03  _flag_emulacao                        
+1     0000aa01  _hab_aquisicao                        
+1     0000aa5a  _hister_delta                         
+1     0000aa09  _indexbufMSTel                        
+1     0000aa07  _indexbufwmec                         
+1     0000aa04  _intDelta_Tel                         
+1     0000aa05  _intMITel                             
+1     0000aa0f  _intang_encoder                       
+1     0000aa0a  _inverso                              
+1     0000aa52  _k_Bem                                
+1     0000aa50  _k_torqu                              
+0     0000d719  _main                                 
+0     0000ca41  _mediamov2                            
+0     0000ca56  _mediamov4                            
+0     0000d6c8  _memcpy                               
+0     0000d74f  _memset                               
+0     0000c759  _mod                                  
+1     0000aaa2  _novo_p2                              
+1     0000aa84  _novo_p_ant                           
+0     0000ca12  _offset                               
+1     0000aa80  _patamar                              
+1     0000aa94  _sample_rate_filt                     
+0     0000c78a  _sat                                  
+0     0000c7b9  _saturador                            
+0     0000c76d  _sign                                 
+1     0000aa56  _sinal_Delta_Tel                      
+1     0000aa58  _sinal_Delta_Tel_antigo               
+1     0000aaa0  _tau_filt                             
+1     0000aa7a  _test_ad                              
+1     0000aa9e  _w_c_filt                             
+1     0000aa2a  _wm                                   
+1     0000aa28  _wmec                                 
+1     0000aa66  _wmecEm                               
+1     0000aa68  _wmecEm0                              
+1     0000aa6a  _wmecEm_RPM                           
+1     0000aa74  _wmecEm_Ref                           
+1     0000aa76  _wmecEm_Ref0                          
+1     0000aa60  _wmecRef                              
+abs   ffffffff  binit                                 
+0     00009800  cinit                                 
+0     00000000  code_start                            
+abs   ffffffff  etext                                 
+abs   ffffffff  pinit                                 
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+page  address   name                                  
+----  -------   ----                                  
+0     00000000  code_start                            
+0     00000122  _F28x_usDelay                         
+0     00000126  _InitSysCtrl                          
+0     00000157  _InitPeripheralClocks                 
+0     000001db  _ServiceDog                           
+0     000001e9  _DisableDog                           
+0     000001f7  _InitSysPll                           
+0     0000028a  _InitAuxPll                           
+0     0000030f  _CsmUnlock                            
+0     00000330  _SysIntOsc1Sel                        
+0     0000033a  _SysIntOsc2Sel                        
+0     00000344  _SysXtalOscSel                        
+0     00000350  _AuxIntOsc2Sel                        
+0     0000035a  _AuxXtalOscSel                        
+0     00000366  _AuxAuxClkSel                         
+0     00000370  _IDLE                                 
+0     00000379  _STANDBY                              
+0     00000384  _HALT                                 
+0     00000394  _HIB                                  
+0     000003a6  _c_int00                              
+0     000003fc  __system_pre_init                     
+0     000003fe  __system_post_cinit                   
+0     00000ce0  _Cla1SoftIntRegs                      
+0     00009800  ___cinit__                            
+0     00009800  cinit                                 
+0     0000c000  _TIMER1_ISR                           
+0     0000c00a  _TIMER2_ISR                           
+0     0000c014  _DATALOG_ISR                          
+0     0000c01e  _RTOS_ISR                             
+0     0000c028  _EMU_ISR                              
+0     0000c032  _NMI_ISR                              
+0     0000c03c  _ILLEGAL_ISR                          
+0     0000c046  _USER1_ISR                            
+0     0000c050  _USER2_ISR                            
+0     0000c05a  _USER3_ISR                            
+0     0000c064  _USER4_ISR                            
+0     0000c06e  _USER5_ISR                            
+0     0000c078  _USER6_ISR                            
+0     0000c082  _USER7_ISR                            
+0     0000c08c  _USER8_ISR                            
+0     0000c096  _USER9_ISR                            
+0     0000c0a0  _USER10_ISR                           
+0     0000c0aa  _USER11_ISR                           
+0     0000c0b4  _USER12_ISR                           
+0     0000c0be  _ADCA1_ISR                            
+0     0000c0c8  _ADCB1_ISR                            
+0     0000c0d2  _ADCC1_ISR                            
+0     0000c0dc  _XINT1_ISR                            
+0     0000c0e6  _XINT2_ISR                            
+0     0000c0f0  _ADCD1_ISR                            
+0     0000c0fa  _TIMER0_ISR                           
+0     0000c104  _WAKE_ISR                             
+0     0000c10e  _EPWM1_TZ_ISR                         
+0     0000c118  _EPWM2_TZ_ISR                         
+0     0000c122  _EPWM3_TZ_ISR                         
+0     0000c12c  _EPWM4_TZ_ISR                         
+0     0000c136  _EPWM5_TZ_ISR                         
+0     0000c140  _EPWM6_TZ_ISR                         
+0     0000c14a  _EPWM7_TZ_ISR                         
+0     0000c154  _EPWM8_TZ_ISR                         
+0     0000c15e  _EPWM1_ISR                            
+0     0000c168  _EPWM2_ISR                            
+0     0000c172  _EPWM3_ISR                            
+0     0000c17c  _EPWM4_ISR                            
+0     0000c186  _EPWM5_ISR                            
+0     0000c190  _EPWM6_ISR                            
+0     0000c19a  _EPWM7_ISR                            
+0     0000c1a4  _EPWM8_ISR                            
+0     0000c1ae  _ECAP1_ISR                            
+0     0000c1b8  _ECAP2_ISR                            
+0     0000c1c2  _ECAP3_ISR                            
+0     0000c1cc  _ECAP4_ISR                            
+0     0000c1d6  _ECAP5_ISR                            
+0     0000c1e0  _ECAP6_ISR                            
+0     0000c1ea  _EQEP1_ISR                            
+0     0000c1f4  _EQEP2_ISR                            
+0     0000c1fe  _EQEP3_ISR                            
+0     0000c208  _SPIA_RX_ISR                          
+0     0000c212  _SPIA_TX_ISR                          
+0     0000c21c  _SPIB_RX_ISR                          
+0     0000c226  _SPIB_TX_ISR                          
+0     0000c230  _MCBSPA_RX_ISR                        
+0     0000c23a  _MCBSPA_TX_ISR                        
+0     0000c244  _MCBSPB_RX_ISR                        
+0     0000c24e  _MCBSPB_TX_ISR                        
+0     0000c258  _DMA_CH1_ISR                          
+0     0000c262  _DMA_CH2_ISR                          
+0     0000c26c  _DMA_CH3_ISR                          
+0     0000c276  _DMA_CH4_ISR                          
+0     0000c280  _DMA_CH5_ISR                          
+0     0000c28a  _DMA_CH6_ISR                          
+0     0000c294  _I2CA_ISR                             
+0     0000c29e  _I2CA_FIFO_ISR                        
+0     0000c2a8  _I2CB_ISR                             
+0     0000c2b2  _I2CB_FIFO_ISR                        
+0     0000c2bc  _SCIC_RX_ISR                          
+0     0000c2c6  _SCIC_TX_ISR                          
+0     0000c2d0  _SCID_RX_ISR                          
+0     0000c2da  _SCID_TX_ISR                          
+0     0000c2e4  _SCIA_RX_ISR                          
+0     0000c2ee  _SCIA_TX_ISR                          
+0     0000c2f8  _SCIB_RX_ISR                          
+0     0000c302  _SCIB_TX_ISR                          
+0     0000c30c  _DCANA_1_ISR                          
+0     0000c316  _DCANA_2_ISR                          
+0     0000c320  _DCANB_1_ISR                          
+0     0000c32a  _DCANB_2_ISR                          
+0     0000c334  _ADCA_EVT_ISR                         
+0     0000c33e  _ADCA2_ISR                            
+0     0000c348  _ADCA3_ISR                            
+0     0000c352  _ADCA4_ISR                            
+0     0000c35c  _ADCB_EVT_ISR                         
+0     0000c366  _ADCB2_ISR                            
+0     0000c370  _ADCB3_ISR                            
+0     0000c37a  _ADCB4_ISR                            
+0     0000c384  _CLA1_1_ISR                           
+0     0000c38e  _CLA1_2_ISR                           
+0     0000c398  _CLA1_3_ISR                           
+0     0000c3a2  _CLA1_4_ISR                           
+0     0000c3ac  _CLA1_5_ISR                           
+0     0000c3b6  _CLA1_6_ISR                           
+0     0000c3c0  _CLA1_7_ISR                           
+0     0000c3ca  _CLA1_8_ISR                           
+0     0000c3d4  _XINT3_ISR                            
+0     0000c3de  _XINT4_ISR                            
+0     0000c3e8  _XINT5_ISR                            
+0     0000c3f2  _PBIST_ISR                            
+0     0000c3fc  _VCU_ISR                              
+0     0000c406  _FPU_OVERFLOW_ISR                     
+0     0000c410  _FPU_UNDERFLOW_ISR                    
+0     0000c41a  _IPC0_ISR                             
+0     0000c424  _IPC1_ISR                             
+0     0000c42e  _IPC2_ISR                             
+0     0000c438  _IPC3_ISR                             
+0     0000c442  _EPWM9_TZ_ISR                         
+0     0000c44c  _EPWM10_TZ_ISR                        
+0     0000c456  _EPWM11_TZ_ISR                        
+0     0000c460  _EPWM12_TZ_ISR                        
+0     0000c46a  _EPWM9_ISR                            
+0     0000c474  _EPWM10_ISR                           
+0     0000c47e  _EPWM11_ISR                           
+0     0000c488  _EPWM12_ISR                           
+0     0000c492  _SD1_ISR                              
+0     0000c49c  _SD2_ISR                              
+0     0000c4a6  _SPIC_RX_ISR                          
+0     0000c4b0  _SPIC_TX_ISR                          
+0     0000c4ba  _UPPA_ISR                             
+0     0000c4c4  _USBA_ISR                             
+0     0000c4ce  _ADCC_EVT_ISR                         
+0     0000c4d8  _ADCC2_ISR                            
+0     0000c4e2  _ADCC3_ISR                            
+0     0000c4ec  _ADCC4_ISR                            
+0     0000c4f6  _ADCD_EVT_ISR                         
+0     0000c500  _ADCD2_ISR                            
+0     0000c50a  _ADCD3_ISR                            
+0     0000c514  _ADCD4_ISR                            
+0     0000c51e  _EMIF_ERROR_ISR                       
+0     0000c528  _RAM_CORRECTABLE_ERROR_ISR            
+0     0000c532  _FLASH_CORRECTABLE_ERROR_ISR          
+0     0000c53c  _RAM_ACCESS_VIOLATION_ISR             
+0     0000c546  _SYS_PLL_SLIP_ISR                     
+0     0000c550  _AUX_PLL_SLIP_ISR                     
+0     0000c55a  _CLA_OVERFLOW_ISR                     
+0     0000c564  _CLA_UNDERFLOW_ISR                    
+0     0000c56e  _PIE_RESERVED_ISR                     
+0     0000c578  _EMPTY_ISR                            
+0     0000c585  _NOTUSED_ISR                          
+0     0000c58f  _TORQ_REAL                            
+0     0000c613  _Filt_bessel                          
+0     0000c68e  _calcula_bessel                       
+0     0000c759  _mod                                  
+0     0000c76d  _sign                                 
+0     0000c78a  _sat                                  
+0     0000c7b9  _saturador                            
+0     0000c7d8  _PD                                   
+0     0000c840  _PI                                   
+0     0000c89c  _Trf_AlfaBeta                         
+0     0000c8b8  _Trf_AlfaBeta_dq                      
+0     0000c8e7  _Trf_dq_AlfaBeta                      
+0     0000c914  _SVPWM                                
+0     0000ca12  _offset                               
+0     0000ca41  _mediamov2                            
+0     0000ca56  _mediamov4                            
+0     0000ca7f  _filtpbaixa                           
+0     0000ca9c  _aquisicaobuffer                      
+0     0000cabd  _aquisicaobuffer_unsigned             
+0     0000cade  _Inicializacao                        
+0     0000cb70  _ConfigureADC                         
+0     0000cb94  _SetupADCEpwm                         
+0     0000cc08  _InitEQep1                            
+0     0000cc31  _ConfigureDAC                         
+0     0000cc49  _InitEPwm1                            
+0     0000cc8e  _InitEPwm2                            
+0     0000ccb7  _InitEPwm3                            
+0     0000ccfa  _InitEPwm4                            
+0     0000cd3d  _InitEPwm5                            
+0     0000cd80  _InitEPwm6                            
+0     0000cdc3  _InitEPwm7                            
+0     0000ce06  _InitEPwm8                            
+0     0000ce49  _InitEPwmGpio                         
+0     0000ce62  _InitEPwm1Gpio                        
+0     0000ce74  _InitEPwm2Gpio                        
+0     0000ce86  _InitEPwm3Gpio                        
+0     0000ce9a  _InitEPwm4Gpio                        
+0     0000ceae  _InitEPwm5Gpio                        
+0     0000cec0  _InitEPwm6Gpio                        
+0     0000ced2  _InitEPwm7Gpio                        
+0     0000cee6  _InitEPwm8Gpio                        
+0     0000cefa  _InitEPwm9Gpio                        
+0     0000cf0c  _InitEPwm10Gpio                       
+0     0000cf1f  _InitEPwm11Gpio                       
+0     0000cf33  _InitEPwm12Gpio                       
+0     0000cf46  _InitEQep                             
+0     0000cf47  _InitEQepGpio                         
+0     0000cf4e  _InitEQep1Gpio                        
+0     0000cf78  _InitEQep2Gpio                        
+0     0000cf9e  _InitEQep3Gpio                        
+0     0000cfdc  _copy_in                              
+0     0000d000  _adca1_isr                            
+0     0000d2df  _InitGpio                             
+0     0000d31f  _GPIO_SetupPinMux                     
+0     0000d3ab  _GPIO_SetupPinOptions                 
+0     0000d43f  _GPIO_SetupLock                       
+0     0000d468  _GPIO_SetupXINT1Gpio                  
+0     0000d472  _GPIO_SetupXINT2Gpio                  
+0     0000d47c  _GPIO_SetupXINT3Gpio                  
+0     0000d486  _GPIO_SetupXINT4Gpio                  
+0     0000d490  _GPIO_SetupXINT5Gpio                  
+0     0000d49a  _GPIO_EnableUnbondedIOPullupsFor176Pin
+0     0000d4b3  _GPIO_EnableUnbondedIOPullupsFor100Pin
+0     0000d4d8  _GPIO_EnableUnbondedIOPullups         
+0     0000d4ee  _GPIO_ReadPin                         
+0     0000d505  _GPIO_WritePin                        
+0     0000d523  FS$$DIV                               
+0     0000d5ab  FD$$MPY                               
+0     0000d62e  C$$EXIT                               
+0     0000d62e  _abort                                
+0     0000d630  _exit                                 
+0     0000d657  _InitPieCtrl                          
+0     0000d676  _EnableInterrupts                     
+0     0000d67f  _InitPieVectTable                     
+0     0000d6a5  FD$$TOFS                              
+0     0000d6c8  _memcpy                               
+0     0000d6e5  FS$$TOFD                              
+0     0000d701  LL$$AND                               
+0     0000d709  LL$$OR                                
+0     0000d711  LL$$XOR                               
+0     0000d719  _main                                 
+0     0000d72c  __args_main                           
+0     0000d73e  __register_unlock                     
+0     0000d742  __register_lock                       
+0     0000d746  __nop                                 
+0     0000d74f  _memset                               
+1     00000400  __stack                               
+1     00000600  __STACK_END                           
+1     00000b00  _AdcaResultRegs                       
+1     00000b20  _AdcbResultRegs                       
+1     00000b40  _AdccResultRegs                       
+1     00000b60  _AdcdResultRegs                       
+1     00000c00  _CpuTimer0Regs                        
+1     00000c08  _CpuTimer1Regs                        
+1     00000c10  _CpuTimer2Regs                        
+1     00000ce0  _PieCtrlRegs                          
+1     00000d00  _EmuKey                               
+1     00000d00  _PieVectTable                         
+1     00000d01  _EmuBMode                             
+1     00001000  _DmaRegs                              
+1     00001400  _Cla1Regs                             
+1     00004000  _EPwm1Regs                            
+1     00004100  _EPwm2Regs                            
+1     00004200  _EPwm3Regs                            
+1     00004300  _EPwm4Regs                            
+1     00004400  _EPwm5Regs                            
+1     00004500  _EPwm6Regs                            
+1     00004600  _EPwm7Regs                            
+1     00004700  _EPwm8Regs                            
+1     00004800  _EPwm9Regs                            
+1     00004900  _EPwm10Regs                           
+1     00004a00  _EPwm11Regs                           
+1     00004b00  _EPwm12Regs                           
+1     00005000  _ECap1Regs                            
+1     00005020  _ECap2Regs                            
+1     00005040  _ECap3Regs                            
+1     00005060  _ECap4Regs                            
+1     00005080  _ECap5Regs                            
+1     000050a0  _ECap6Regs                            
+1     00005100  _EQep1Regs                            
+1     00005140  _EQep2Regs                            
+1     00005180  _EQep3Regs                            
+1     00005c00  _DacaRegs                             
+1     00005c10  _DacbRegs                             
+1     00005c20  _DaccRegs                             
+1     00005c80  _Cmpss1Regs                           
+1     00005ca0  _Cmpss2Regs                           
+1     00005cc0  _Cmpss3Regs                           
+1     00005ce0  _Cmpss4Regs                           
+1     00005d00  _Cmpss5Regs                           
+1     00005d20  _Cmpss6Regs                           
+1     00005d40  _Cmpss7Regs                           
+1     00005d60  _Cmpss8Regs                           
+1     00005e00  _Sdfm1Regs                            
+1     00005e80  _Sdfm2Regs                            
+1     00006000  _McbspaRegs                           
+1     00006040  _McbspbRegs                           
+1     00006100  _SpiaRegs                             
+1     00006110  _SpibRegs                             
+1     00006120  _SpicRegs                             
+1     00006200  _UppRegs                              
+1     00007000  _WdRegs                               
+1     00007060  _NmiIntruptRegs                       
+1     00007070  _XintRegs                             
+1     00007200  _SciaRegs                             
+1     00007210  _ScibRegs                             
+1     00007220  _ScicRegs                             
+1     00007230  _ScidRegs                             
+1     00007300  _I2caRegs                             
+1     00007340  _I2cbRegs                             
+1     00007400  _AdcaRegs                             
+1     00007480  _AdcbRegs                             
+1     00007500  _AdccRegs                             
+1     00007580  _AdcdRegs                             
+1     00007900  _InputXbarRegs                        
+1     00007940  _TrigRegs                             
+1     00007980  _DmaClaSrcSelRegs                     
+1     00007a00  _EPwmXbarRegs                         
+1     00007a80  _OutputXbarRegs                       
+1     00007c00  _GpioCtrlRegs                         
+1     00007f00  _GpioDataRegs                         
+1     0000a800  _PieVectTableInit                     
+1     0000a9c4  ___TI_enable_exit_profile_output      
+1     0000a9c6  ___TI_cleanup_ptr                     
+1     0000a9c8  ___TI_dtors_ptr                       
+1     0000a9ca  __lock                                
+1     0000a9cc  __unlock                              
+1     0000aa00  _Waitflux                             
+1     0000aa01  _hab_aquisicao                        
+1     0000aa02  _flag_aquisicao                       
+1     0000aa03  _flag_emulacao                        
+1     0000aa04  _intDelta_Tel                         
+1     0000aa05  _intMITel                             
+1     0000aa06  _cont_buffwmec                        
+1     0000aa07  _indexbufwmec                         
+1     0000aa08  _cont_buffMSTel                       
+1     0000aa09  _indexbufMSTel                        
+1     0000aa0a  _inverso                              
+1     0000aa0b  _direcao                              
+1     0000aa0c  _LoopctrlVel                          
+1     0000aa0d  _Loopctrl                             
+1     0000aa0e  _LoopVel                              
+1     0000aa0f  _intang_encoder                       
+1     0000aa10  _TempoOffset                          
+1     0000aa11  _TempoOffset_fino                     
+1     0000aa12  _MITel_Sentido                        
+1     0000aa13  _flag_MSTel_Zero                      
+1     0000aa14  _contstep                             
+1     0000aa16  _Tel_ref0                             
+1     0000aa18  _ang_encoder_ant                      
+1     0000aa1a  _difang_encoder                       
+1     0000aa1c  _angulo_encoder                       
+1     0000aa1e  _angulo_encoder0                      
+1     0000aa20  _filtangulo_encoder                   
+1     0000aa22  _NumPulsos                            
+1     0000aa24  _ang_encoder                          
+1     0000aa26  _ang_encoder0                         
+1     0000aa28  _wmec                                 
+1     0000aa2a  _wm                                   
+1     0000aa2c  _MSTel                                
+1     0000aa2e  _Delta_Tel                            
+1     0000aa30  _MITel                                
+1     0000aa32  _MITelf0                              
+1     0000aa34  _Delta_Telf0                          
+1     0000aa36  _MITel_offset                         
+1     0000aa38  _Delta_Tel_offset                     
+1     0000aa3a  _MITel_offpass0                       
+1     0000aa3c  _Delta_Tel_offpass0                   
+1     0000aa3e  _Delta_Tel0                           
+1     0000aa40  _Delta_Tel00                          
+1     0000aa42  _Delta_Tel000                         
+1     0000aa44  _MITel0                               
+1     0000aa46  _MITel00                              
+1     0000aa48  _MITel000                             
+1     0000aa4a  _abs_Delta_Tel                        
+1     0000aa4c  _abs_MITel                            
+1     0000aa4e  _abs_MSTel                            
+1     0000aa50  _k_torqu                              
+1     0000aa52  _k_Bem                                
+1     0000aa54  _Delta_Tel_antigo                     
+1     0000aa56  _sinal_Delta_Tel                      
+1     0000aa58  _sinal_Delta_Tel_antigo               
+1     0000aa5a  _hister_delta                         
+1     0000aa5c  _Delta_Tel_f2                         
+1     0000aa5e  _Delta_Tel_f20                        
+1     0000aa60  _wmecRef                              
+1     0000aa62  _MITel_Ref                            
+1     0000aa64  _MITel_Ref0                           
+1     0000aa66  _wmecEm                               
+1     0000aa68  _wmecEm0                              
+1     0000aa6a  _wmecEm_RPM                           
+1     0000aa6c  _Bem                                  
+1     0000aa6e  _Jem                                  
+1     0000aa70  _Tf                                   
+1     0000aa72  _erro_wmecEm0                         
+1     0000aa74  _wmecEm_Ref                           
+1     0000aa76  _wmecEm_Ref0                          
+1     0000aa78  _SaidaInv_AI1                         
+1     0000aa7a  _test_ad                              
+1     0000aa7c  _Kp                                   
+1     0000aa7e  _Ki                                   
+1     0000aa80  _patamar                              
+1     0000aa82  _derivf_ant                           
+1     0000aa84  _novo_p_ant                           
+1     0000aa86  _filtrado_anterior                    
+1     0000aa88  _filt_a                               
+1     0000aa8a  _filt_b                               
+1     0000aa8c  _filt_a3                              
+1     0000aa8e  _filt_b3                              
+1     0000aa90  _filt_a2                              
+1     0000aa92  _filt_b2                              
+1     0000aa94  _sample_rate_filt                     
+1     0000aa96  _cutoff_frequency                     
+1     0000aa98  _cutoff_frequency2                    
+1     0000aa9a  _cutoff_frequency3                    
+1     0000aa9c  _dt_filt                              
+1     0000aa9e  _w_c_filt                             
+1     0000aaa0  _tau_filt                             
+1     0000aaa2  _novo_p2                              
+1     0000aaa4  _DeltaTel_anterior                    
+1     0000aaa6  _DetltaTelDeriv_ant                   
+1     0000aaa8  _DeltaTelIntgrado_ant                 
+1     0000aaaa  _MITel_anterior                       
+1     0000aaac  _MITelDeriv_ant                       
+1     0000aaae  _MITelIntgrado_ant                    
+1     0000e000  _buffer_MSTel                         
+1     00015540  _buffer_wmec                          
+1     00047000  _Emif1Regs                            
+1     00047800  _Emif2Regs                            
+1     00048000  _CanaRegs                             
+1     0004a000  _CanbRegs                             
+1     00050000  _IpcRegs                              
+1     0005d000  _DevCfgRegs                           
+1     0005d180  _AnalogSubsysRegs                     
+1     0005d200  _ClkCfgRegs                           
+1     0005d300  _CpuSysRegs                           
+1     0005e000  _HwbistRegs                           
+1     0005e200  _PbistRegs                            
+1     0005e608  _RomPrefetchRegs                      
+1     0005f000  _DcsmZ1Regs                           
+1     0005f040  _DcsmZ2Regs                           
+1     0005f070  _DcsmCommonRegs                       
+1     0005f400  _MemCfgRegs                           
+1     0005f480  _Emif1ConfigRegs                      
+1     0005f4a0  _Emif2ConfigRegs                      
+1     0005f4c0  _AccessProtectionRegs                 
+1     0005f500  _MemoryErrorRegs                      
+1     0005f540  _RomWaitStateRegs                     
+1     0005f800  _Flash0CtrlRegs                       
+1     0005fb00  _Flash0EccRegs                        
+1     00078000  _DcsmZ1Otp                            
+1     00078200  _DcsmZ2Otp                            
+abs   00000200  __STACK_SIZE                          
+abs   ffffffff  .text                                 
+abs   ffffffff  ___TI_pprof_out_hndl                  
+abs   ffffffff  ___TI_prof_data_size                  
+abs   ffffffff  ___TI_prof_data_start                 
+abs   ffffffff  ___binit__                            
+abs   ffffffff  ___c_args__                           
+abs   ffffffff  ___etext__                            
+abs   ffffffff  ___pinit__                            
+abs   ffffffff  ___text__                             
+abs   ffffffff  binit                                 
+abs   ffffffff  etext                                 
+abs   ffffffff  pinit                                 
+
+[472 symbols]

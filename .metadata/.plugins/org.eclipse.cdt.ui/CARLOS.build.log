@@ -1,0 +1,26 @@
+
+**** Build of configuration Debug for project CARLOS ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 16 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/dimit/workspace_v12/CARLOS" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 8: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "int *"
+"../main.c", line 8: warning #154-D: conversion of nonzero integer to pointer
+"../main.c", line 67: warning #177-D: subscript out of range
+"../main.c", line 93: error #80: expected a type specifier
+"../main.c", line 93: error #80: expected a type specifier
+"../main.c", line 93: error #142-D: unnamed prototyped parameters not allowed when body is present
+"../main.c", line 98: error #20: identifier "MSTel" is undefined
+"../main.c", line 109: error #20: identifier "Torq_ind_novo" is undefined
+"../main.c", line 94: warning #179-D: variable "FLAG_TORQ_IND_ZERO" was declared but never referenced
+"../main.c", line 95: warning #179-D: variable "Torq_novo" was declared but never referenced
+5 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

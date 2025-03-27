@@ -1,0 +1,18 @@
+
+**** Build of configuration Debug for project CODIGO_CARLOS ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 16 all -O 
+ 
+Building file: "../Controle_Motores.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/dimit/workspace_v12/CODIGO_CARLOS" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Controle_Motores.d_raw"  "../Controle_Motores.c"
+Finished building: "../Controle_Motores.c"
+ 
+Building target: "CODIGO_CARLOS.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"CODIGO_CARLOS.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="CODIGO_CARLOS_linkInfo.xml" --rom_model -o "CODIGO_CARLOS.out" "./Controle_Motores.obj" "./UART.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "CODIGO_CARLOS.out"
+ 
+
+**** Build Finished ****

@@ -1,0 +1,62 @@
+[
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/sd_card/Debug",
+      "command"   : "clang++ -I\"C:/Users/dimit/workspace_v12/sd_card\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/third_party\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C129XNCZAD -DTARGET_IS_TM4C129_RA0 -DENABLE_LFN -DUART_BUFFERED",
+      "file"      : "C:/ti/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/drivers/frame.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/sd_card/Debug",
+      "command"   : "clang++ -I\"C:/Users/dimit/workspace_v12/sd_card\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/third_party\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C129XNCZAD -DTARGET_IS_TM4C129_RA0 -DENABLE_LFN -DUART_BUFFERED",
+      "file"      : "C:/ti/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/drivers/kentec320x240x16_ssd2119.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/sd_card/Debug",
+      "command"   : "clang++ -I\"C:/Users/dimit/workspace_v12/sd_card\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/third_party\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C129XNCZAD -DTARGET_IS_TM4C129_RA0 -DENABLE_LFN -DUART_BUFFERED",
+      "file"      : "C:/ti/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/drivers/pinout.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/sd_card/Debug",
+      "command"   : "clang++ -I\"C:/Users/dimit/workspace_v12/sd_card\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/third_party\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C129XNCZAD -DTARGET_IS_TM4C129_RA0 -DENABLE_LFN -DUART_BUFFERED",
+      "file"      : "C:/ti/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/drivers/touch.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/sd_card/Debug",
+      "command"   : "clang++ -I\"C:/Users/dimit/workspace_v12/sd_card\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/third_party\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C129XNCZAD -DTARGET_IS_TM4C129_RA0 -DENABLE_LFN -DUART_BUFFERED",
+      "file"      : "C:/Users/dimit/workspace_v12/sd_card/sd_card.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/sd_card/Debug",
+      "command"   : "clang++ -I\"C:/Users/dimit/workspace_v12/sd_card\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/third_party\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C129XNCZAD -DTARGET_IS_TM4C129_RA0 -DENABLE_LFN -DUART_BUFFERED",
+      "file"      : "C:/Users/dimit/workspace_v12/sd_card/startup_ccs.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/sd_card/Debug",
+      "command"   : "clang++ -I\"C:/Users/dimit/workspace_v12/sd_card\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/third_party\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C129XNCZAD -DTARGET_IS_TM4C129_RA0 -DENABLE_LFN -DUART_BUFFERED",
+      "file"      : "C:/ti/TivaWare_C_Series-2.2.0.295/third_party/fatfs/port/mmc-dk-tm4c129x.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/sd_card/Debug",
+      "command"   : "clang++ -I\"C:/Users/dimit/workspace_v12/sd_card\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/third_party\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C129XNCZAD -DTARGET_IS_TM4C129_RA0 -DENABLE_LFN -DUART_BUFFERED",
+      "file"      : "C:/ti/TivaWare_C_Series-2.2.0.295/third_party/fatfs/src/ff.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/sd_card/Debug",
+      "command"   : "clang++ -I\"C:/Users/dimit/workspace_v12/sd_card\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/third_party\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C129XNCZAD -DTARGET_IS_TM4C129_RA0 -DENABLE_LFN -DUART_BUFFERED",
+      "file"      : "C:/ti/TivaWare_C_Series-2.2.0.295/third_party/fatfs/src/option/cc932.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/sd_card/Debug",
+      "command"   : "clang++ -I\"C:/Users/dimit/workspace_v12/sd_card\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/third_party\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C129XNCZAD -DTARGET_IS_TM4C129_RA0 -DENABLE_LFN -DUART_BUFFERED",
+      "file"      : "C:/ti/TivaWare_C_Series-2.2.0.295/utils/cmdline.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/sd_card/Debug",
+      "command"   : "clang++ -I\"C:/Users/dimit/workspace_v12/sd_card\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/third_party\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C129XNCZAD -DTARGET_IS_TM4C129_RA0 -DENABLE_LFN -DUART_BUFFERED",
+      "file"      : "C:/ti/TivaWare_C_Series-2.2.0.295/utils/uartstdio.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/sd_card/Debug",
+      "command"   : "clang++ -I\"C:/Users/dimit/workspace_v12/sd_card\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295/third_party\" -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -Dccs=\"ccs\" -DPART_TM4C129XNCZAD -DTARGET_IS_TM4C129_RA0 -DENABLE_LFN -DUART_BUFFERED",
+      "file"      : "C:/ti/TivaWare_C_Series-2.2.0.295/utils/ustdlib.c"
+   }
+]

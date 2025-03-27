@@ -1,0 +1,12 @@
+[
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/project/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Users/dimit/workspace_v12/project/project.c"
+   },
+   {
+      "directory" : "C:/Users/dimit/workspace_v12/project/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2010/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include\" -I\"C:/ti/TivaWare_C_Series-2.2.0.295\" -Dccs=\"ccs\" -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1",
+      "file"      : "C:/Users/dimit/workspace_v12/project/startup_ccs.c"
+   }
+]
